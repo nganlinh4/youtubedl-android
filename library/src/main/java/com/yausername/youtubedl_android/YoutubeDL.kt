@@ -31,12 +31,11 @@ object YoutubeDL {
     fun init(appContext: Context) = init(appContext, null)
 
     /**
-     * Initialize with an optional external directory containing the .zip.so archives.
-     * When [externalZipDir] is non-null, `libpython.zip.so` is read from that directory
-     * instead of the APK's native library directory. This allows the large zip archives
+     * Initialize with an optional external directory containing native libraries.
+     * When [externalZipDir] is non-null, all native files (libpython.zip.so,
+     * libpython.so, libffmpeg.so, etc.) are read from that directory instead of
+     * the APK's native library directory. This allows the entire native payload
      * to be downloaded on demand rather than bundled in the APK.
-     * The small executable .so files (libpython.so, libffmpeg.so, etc.) are still read
-     * from the APK's native library directory.
      */
     @Synchronized
     @Throws(YoutubeDLException::class)
@@ -45,7 +44,13 @@ object YoutubeDL {
         val baseDir = File(appContext.noBackupFilesDir, baseName)
         if (!baseDir.exists()) baseDir.mkdir()
         val packagesDir = File(baseDir, packagesRoot)
-        binDir = File(appContext.applicationInfo.nativeLibraryDir)
+        val apkBinDir = File(appContext.applicationInfo.nativeLibraryDir)
+        // Use externalZipDir for executables if they exist there, else fall back to APK
+        binDir = if (externalZipDir != null && File(externalZipDir, pythonBinName).exists()) {
+            externalZipDir
+        } else {
+            apkBinDir
+        }
         pythonPath = File(binDir, pythonBinName)
         ffmpegPath = File(binDir, ffmpegBinName)
         val pythonDir = File(packagesDir, pythonDirName)
