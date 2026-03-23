@@ -26,12 +26,7 @@ object FFmpeg {
         if (initialized) return
         val baseDir = File(appContext.noBackupFilesDir, baseName)
         if (!baseDir.exists()) baseDir.mkdir()
-        val apkBinDir = File(appContext.applicationInfo.nativeLibraryDir)
-        binDir = if (externalZipDir != null && File(externalZipDir, ffmpegLibName).exists()) {
-            externalZipDir
-        } else {
-            apkBinDir
-        }
+        binDir = File(appContext.applicationInfo.nativeLibraryDir)
         val packagesDir = File(baseDir, packagesRoot)
         val ffmpegDir = File(packagesDir, ffmegDirName)
         initFFmpeg(appContext, ffmpegDir, externalZipDir)

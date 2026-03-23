@@ -44,13 +44,7 @@ object YoutubeDL {
         val baseDir = File(appContext.noBackupFilesDir, baseName)
         if (!baseDir.exists()) baseDir.mkdir()
         val packagesDir = File(baseDir, packagesRoot)
-        val apkBinDir = File(appContext.applicationInfo.nativeLibraryDir)
-        // Use externalZipDir for executables if they exist there, else fall back to APK
-        binDir = if (externalZipDir != null && File(externalZipDir, pythonBinName).exists()) {
-            externalZipDir
-        } else {
-            apkBinDir
-        }
+        binDir = File(appContext.applicationInfo.nativeLibraryDir)
         pythonPath = File(binDir, pythonBinName)
         ffmpegPath = File(binDir, ffmpegBinName)
         val pythonDir = File(packagesDir, pythonDirName)
