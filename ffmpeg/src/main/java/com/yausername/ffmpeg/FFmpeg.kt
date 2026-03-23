@@ -13,19 +13,28 @@ object FFmpeg {
     private var binDir: File? = null
 
     @Synchronized
-    fun init(appContext: Context) {
+    fun init(appContext: Context) = init(appContext, null)
+
+    /**
+     * Initialize with an optional external directory containing `libffmpeg.zip.so`.
+     * When [externalZipDir] is non-null, the zip archive is read from that directory
+     * instead of the APK's native library directory.
+     */
+    @Synchronized
+    fun init(appContext: Context, externalZipDir: File?) {
         if (initialized) return
         val baseDir = File(appContext.noBackupFilesDir, baseName)
         if (!baseDir.exists()) baseDir.mkdir()
         binDir = File(appContext.applicationInfo.nativeLibraryDir)
         val packagesDir = File(baseDir, packagesRoot)
         val ffmpegDir = File(packagesDir, ffmegDirName)
-        initFFmpeg(appContext, ffmpegDir)
+        initFFmpeg(appContext, ffmpegDir, externalZipDir)
         initialized = true
     }
 
-    private fun initFFmpeg(appContext: Context, ffmpegDir: File) {
-        val ffmpegLib = File(binDir, ffmpegLibName)
+    private fun initFFmpeg(appContext: Context, ffmpegDir: File, externalZipDir: File? = null) {
+        val zipSource = externalZipDir ?: binDir!!
+        val ffmpegLib = File(zipSource, ffmpegLibName)
         // using size of lib as version
         val ffmpegSize = ffmpegLib.length().toString()
         if (!ffmpegDir.exists() || shouldUpdateFFmpeg(appContext, ffmpegSize)) {

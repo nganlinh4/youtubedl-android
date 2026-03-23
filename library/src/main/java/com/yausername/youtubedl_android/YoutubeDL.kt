@@ -28,7 +28,19 @@ object YoutubeDL {
 
     @Synchronized
     @Throws(YoutubeDLException::class)
-    fun init(appContext: Context) {
+    fun init(appContext: Context) = init(appContext, null)
+
+    /**
+     * Initialize with an optional external directory containing the .zip.so archives.
+     * When [externalZipDir] is non-null, `libpython.zip.so` is read from that directory
+     * instead of the APK's native library directory. This allows the large zip archives
+     * to be downloaded on demand rather than bundled in the APK.
+     * The small executable .so files (libpython.so, libffmpeg.so, etc.) are still read
+     * from the APK's native library directory.
+     */
+    @Synchronized
+    @Throws(YoutubeDLException::class)
+    fun init(appContext: Context, externalZipDir: File?) {
         if (initialized) return
         val baseDir = File(appContext.noBackupFilesDir, baseName)
         if (!baseDir.exists()) baseDir.mkdir()
@@ -47,7 +59,7 @@ object YoutubeDL {
         ENV_SSL_CERT_FILE = pythonDir.absolutePath + "/usr/etc/tls/cert.pem"
         ENV_PYTHONHOME = pythonDir.absolutePath + "/usr"
         TMPDIR = appContext.cacheDir.absolutePath
-        initPython(appContext, pythonDir)
+        initPython(appContext, pythonDir, externalZipDir)
         init_ytdlp(appContext, ytdlpDir)
         initialized = true
     }
@@ -69,8 +81,9 @@ object YoutubeDL {
     }
 
     @Throws(YoutubeDLException::class)
-    fun initPython(appContext: Context, pythonDir: File) {
-        val pythonLib = File(binDir, pythonLibName)
+    fun initPython(appContext: Context, pythonDir: File, externalZipDir: File? = null) {
+        val zipSource = externalZipDir ?: binDir!!
+        val pythonLib = File(zipSource, pythonLibName)
         // using size of lib as version
         val pythonSize = pythonLib.length().toString()
         if (!pythonDir.exists() || shouldUpdatePython(appContext, pythonSize)) {
