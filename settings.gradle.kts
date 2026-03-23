@@ -5,7 +5,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter()
+        // jcenter() deprecated
         // e.g this is how you would add jitpack
         maven("https://jitpack.io")
         // Add any repositories you would be adding to all projects here
