@@ -44,7 +44,11 @@ object YoutubeDL {
         val baseDir = File(appContext.noBackupFilesDir, baseName)
         if (!baseDir.exists()) baseDir.mkdir()
         val packagesDir = File(baseDir, packagesRoot)
-        binDir = File(appContext.applicationInfo.nativeLibraryDir)
+        // When native libraries are delivered on demand (e.g. a Play Feature
+        // Delivery module), libpython.so / libffmpeg.so live in [externalZipDir],
+        // not the base APK's nativeLibraryDir. Honor it for the executable paths,
+        // the PATH env, and the zip payload source so exec resolves correctly.
+        binDir = externalZipDir ?: File(appContext.applicationInfo.nativeLibraryDir)
         pythonPath = File(binDir, pythonBinName)
         ffmpegPath = File(binDir, ffmpegBinName)
         val pythonDir = File(packagesDir, pythonDirName)
@@ -83,6 +87,12 @@ object YoutubeDL {
     fun initPython(appContext: Context, pythonDir: File, externalZipDir: File? = null) {
         val zipSource = externalZipDir ?: binDir!!
         val pythonLib = File(zipSource, pythonLibName)
+        if (!pythonLib.exists()) {
+            if (pythonDir.exists()) {
+                return
+            }
+            throw YoutubeDLException("failed to initialize: missing $pythonLibName at ${pythonLib.absolutePath}")
+        }
         // using size of lib as version
         val pythonSize = pythonLib.length().toString()
         if (!pythonDir.exists() || shouldUpdatePython(appContext, pythonSize)) {
@@ -94,6 +104,8 @@ object YoutubeDL {
                 FileUtils.deleteQuietly(pythonDir)
                 throw YoutubeDLException("failed to initialize", e)
             }
+            // Keep externally supplied zip payloads intact. Callers may need to
+            // re-run init() or update yt-dlp later without re-downloading them.
             updatePython(appContext, pythonSize)
         }
     }
@@ -140,12 +152,19 @@ object YoutubeDL {
                 alive = p!!.isAlive
             }
             if (alive) {
-                p!!.destroy()
+                destroyProcess(p!!)
                 idProcessMap.remove(id)
                 return true
             }
         }
         return false
+    }
+
+    private fun destroyProcess(process: Process) {
+        process.destroy()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && process.isAlive) {
+            process.destroyForcibly()
+        }
     }
 
     class CanceledException : Exception()
@@ -189,7 +208,7 @@ object YoutubeDL {
         processBuilder.environment().apply {
             this["LD_LIBRARY_PATH"] = ENV_LD_LIBRARY_PATH
             this["SSL_CERT_FILE"] = ENV_SSL_CERT_FILE
-            this["PATH"] = System.getenv("PATH") + ":" + binDir!!.absolutePath
+            this["PATH"] = (System.getenv("PATH") ?: "") + ":" + binDir!!.absolutePath
             this["PYTHONHOME"] = ENV_PYTHONHOME
             this["HOME"] = ENV_PYTHONHOME
             this["TMPDIR"] = TMPDIR
@@ -212,7 +231,7 @@ object YoutubeDL {
             stdErrProcessor.join()
             process.waitFor()
         } catch (e: InterruptedException) {
-            process.destroy()
+            destroyProcess(process)
             if (processId != null) idProcessMap.remove(processId)
             throw e
         }
