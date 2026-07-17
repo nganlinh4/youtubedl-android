@@ -26,8 +26,7 @@ object FFmpeg {
         if (initialized) return
         val baseDir = File(appContext.noBackupFilesDir, baseName)
         if (!baseDir.exists()) baseDir.mkdir()
-        // On-demand delivery: read libffmpeg.zip.so from [externalZipDir] when given.
-        binDir = externalZipDir ?: File(appContext.applicationInfo.nativeLibraryDir)
+        binDir = File(appContext.applicationInfo.nativeLibraryDir)
         val packagesDir = File(baseDir, packagesRoot)
         val ffmpegDir = File(packagesDir, ffmegDirName)
         initFFmpeg(appContext, ffmpegDir, externalZipDir)
@@ -37,12 +36,6 @@ object FFmpeg {
     private fun initFFmpeg(appContext: Context, ffmpegDir: File, externalZipDir: File? = null) {
         val zipSource = externalZipDir ?: binDir!!
         val ffmpegLib = File(zipSource, ffmpegLibName)
-        if (!ffmpegLib.exists()) {
-            if (ffmpegDir.exists()) {
-                return
-            }
-            throw YoutubeDLException("failed to initialize: missing $ffmpegLibName at ${ffmpegLib.absolutePath}")
-        }
         // using size of lib as version
         val ffmpegSize = ffmpegLib.length().toString()
         if (!ffmpegDir.exists() || shouldUpdateFFmpeg(appContext, ffmpegSize)) {
@@ -54,8 +47,6 @@ object FFmpeg {
                 FileUtils.deleteQuietly(ffmpegDir)
                 throw YoutubeDLException("failed to initialize", e)
             }
-            // Keep externally supplied zip payloads intact. Callers may need to
-            // re-run init() later without forcing another download first.
             updateFFmpeg(appContext, ffmpegSize)
         }
     }
