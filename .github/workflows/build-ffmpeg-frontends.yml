@@ -47,23 +47,30 @@ jobs:
 
           libxml2 = Path("packages/libxml2/build.sh")
           source = libxml2.read_text()
-          if (
-              source.count("-Dicu=enabled") != 1
-              or source.count("-Ddocs=enabled") != 1
-              or source.count(", libicu") != 1
-              or source.count('TERMUX_PKG_BUILD_DEPENDS="doxygen, python, readline"') != 1
-          ):
-              raise SystemExit("libxml2 ICU configuration changed")
-          libxml2.write_text(
-              source.replace("-Dicu=enabled", "-Dicu=disabled")
-              .replace("-Ddocs=enabled", "-Ddocs=disabled")
-              .replace(", libicu", "")
-          )
-
-          source = libxml2.read_text()
+          expected = {
+              "TERMUX_PKG_HOSTBUILD=true": 1,
+              "TERMUX_PKG_SETUP_PYTHON=true": 1,
+              "-Ddocs=enabled": 1,
+              "-Dhttp=enabled": 1,
+              "-Dicu=enabled": 1,
+              "-Dlegacy=enabled": 1,
+              "-Dpython=enabled": 1,
+              "-Dhistory=enabled": 1,
+              "-Dreadline=enabled": 1,
+              ", libicu": 1,
+              'TERMUX_PKG_BUILD_DEPENDS="doxygen, python, readline"': 1,
+          }
+          changed = [needle for needle, count in expected.items() if source.count(needle) != count]
+          if changed:
+              raise SystemExit(f"libxml2 configuration changed: {changed}")
+          for option in ("docs", "icu", "python", "history", "readline"):
+              source = source.replace(f"-D{option}=enabled", f"-D{option}=disabled")
+          source = source.replace("TERMUX_PKG_HOSTBUILD=true\n", "")
+          source = source.replace("TERMUX_PKG_SETUP_PYTHON=true\n", "")
+          source = source.replace(", libicu", "")
           source = source.replace(
-              'TERMUX_PKG_BUILD_DEPENDS="doxygen, python, readline"',
-              'TERMUX_PKG_BUILD_DEPENDS="python, readline"',
+              'TERMUX_PKG_BUILD_DEPENDS="doxygen, python, readline"\n',
+              "",
           )
           source, replacements = re.subn(
               r"termux_step_host_build\(\) \{\n.*?\n\}\n\n",
