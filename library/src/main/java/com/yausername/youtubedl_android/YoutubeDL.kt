@@ -21,6 +21,7 @@ object YoutubeDL {
     private var ytdlpPath: File? = null
     private var binDir: File? = null
     private var ENV_LD_LIBRARY_PATH: String? = null
+    private var ENV_OPENSSL_MODULES: String? = null
     private var ENV_SSL_CERT_FILE: String? = null
     private var ENV_PYTHONHOME: String? = null
     private var TMPDIR: String = ""
@@ -55,6 +56,7 @@ object YoutubeDL {
         ENV_LD_LIBRARY_PATH = pythonDir.absolutePath + "/usr/lib" + ":" +
                 ffmpegDir.absolutePath + "/usr/lib" + ":" +
                 aria2cDir.absolutePath + "/usr/lib"
+        ENV_OPENSSL_MODULES = pythonDir.absolutePath + "/usr/lib/ossl-modules"
         ENV_SSL_CERT_FILE = pythonDir.absolutePath + "/usr/etc/tls/cert.pem"
         ENV_PYTHONHOME = pythonDir.absolutePath + "/usr"
         TMPDIR = appContext.cacheDir.absolutePath
@@ -188,6 +190,7 @@ object YoutubeDL {
         val processBuilder = ProcessBuilder(command)
         processBuilder.environment().apply {
             this["LD_LIBRARY_PATH"] = ENV_LD_LIBRARY_PATH
+            this["OPENSSL_MODULES"] = ENV_OPENSSL_MODULES
             this["SSL_CERT_FILE"] = ENV_SSL_CERT_FILE
             this["PATH"] = System.getenv("PATH").orEmpty() + ":" + binDir!!.absolutePath
             this["PYTHONHOME"] = ENV_PYTHONHOME

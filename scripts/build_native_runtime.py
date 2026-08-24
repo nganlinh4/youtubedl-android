@@ -68,6 +68,7 @@ class RuntimeEntry:
     data: bytes
     mode: int
     symlink: bool = False
+    package: str = ""
 
 
 def sha256(data: bytes) -> str:
@@ -250,7 +251,9 @@ def normalize_link(member_name: str, link_name: str) -> str:
     return link_name
 
 
-def merge_package(entries: dict[str, RuntimeEntry], package_data: bytes, role: str) -> None:
+def merge_package(
+    entries: dict[str, RuntimeEntry], package_data: bytes, role: str, package: str
+) -> None:
     payload = ar_member(package_data, b"data.tar")
     with tarfile.open(fileobj=io.BytesIO(payload), mode="r:*") as archive:
         for member in archive.getmembers():
@@ -259,12 +262,14 @@ def merge_package(entries: dict[str, RuntimeEntry], package_data: bytes, role: s
                 continue
             if member.issym() or member.islnk():
                 link = normalize_link(name, member.linkname).encode("utf-8")
-                entries[name] = RuntimeEntry(link, stat.S_IFLNK | 0o777, True)
+                entries[name] = RuntimeEntry(link, stat.S_IFLNK | 0o777, True, package)
             elif member.isfile():
                 source = archive.extractfile(member)
                 if source is None:
                     raise ValueError(f"Could not read {member.name}")
-                entries[name] = RuntimeEntry(source.read(), stat.S_IFREG | (member.mode & 0o777))
+                entries[name] = RuntimeEntry(
+                    source.read(), stat.S_IFREG | (member.mode & 0o777), package=package
+                )
 
 
 def package_bytes(record: dict[str, str], cache: Path, repository: str) -> bytes:
@@ -319,7 +324,21 @@ def prune_runtime(
     external_roots: list[bytes] | None = None,
     keep_non_elf: Callable[[str], bool] | None = None,
 ) -> dict[str, RuntimeEntry]:
-    closure = dependency_closure(entries, root_names, external_roots)
+    preliminary = dependency_closure(entries, root_names, external_roots)
+    active_packages = {entries[name].package for name in preliminary if name in entries}
+    # DT_NEEDED cannot describe modules discovered at runtime. Preserve nested
+    # ELF modules only from packages already proven reachable, then close over
+    # their dependencies. This retains plug-ins without reviving unrelated
+    # language runtimes or optional toolchains from the package graph.
+    module_roots = [
+        name
+        for name, entry in entries.items()
+        if name.startswith("usr/lib/")
+        and PurePosixPath(name).parent != PurePosixPath("usr/lib")
+        and metadata(entry.data) is not None
+        and entry.package in active_packages
+    ]
+    closure = dependency_closure(entries, [*root_names, *module_roots], external_roots)
     return {
         name: entry
         for name, entry in entries.items()
@@ -362,7 +381,7 @@ def build_abi(
         for record in records:
             data = package_bytes(record, cache / abi, repository)
             raw_packages[record["name"]] = data
-            merge_package(entries, data, role)
+            merge_package(entries, data, role, record["name"])
         built[role] = entries
 
     libxml2_package = native_overrides / abi / "libxml2.deb"
@@ -374,7 +393,7 @@ def build_abi(
             for name, entry in built[role].items()
             if not PurePosixPath(name).name.startswith("libxml2.so")
         }
-        merge_package(built[role], libxml2_package.read_bytes(), role)
+        merge_package(built[role], libxml2_package.read_bytes(), role, "libxml2")
 
     version = python_version(built["python"])
     merge_mutagen(built["python"], version, cache / abi)
@@ -392,7 +411,7 @@ def build_abi(
             raise ValueError(f"Missing -rdynamic FFmpeg frontend: {frontend}")
         verify_dynamic_main(frontend)
         built["ffmpeg"][f"usr/lib/lib{binary}_real.so"] = RuntimeEntry(
-            frontend.read_bytes(), stat.S_IFREG | 0o755
+            frontend.read_bytes(), stat.S_IFREG | 0o755, package="ffmpeg"
         )
 
     built["ffmpeg"] = prune_runtime(

@@ -1,4 +1,5 @@
 import com.android.build.api.dsl.Publishing
+import org.gradle.api.tasks.Exec
 import org.gradle.api.tasks.bundling.Zip
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
@@ -42,6 +43,29 @@ allprojects {
 
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
+}
+
+val verifyNativePageAlignment by tasks.registering(Exec::class) {
+    group = "verification"
+    description = "Verifies every bundled 64-bit ELF uses 16 KB LOAD alignment."
+    val nativeRoots = listOf("library", "ffmpeg", "aria2c").map {
+        layout.projectDirectory.dir("$it/src/main/jniLibs")
+    }
+    inputs.files(nativeRoots)
+    val python = if (System.getProperty("os.name").startsWith("Windows")) {
+        listOf("py", "-3")
+    } else {
+        listOf("python3")
+    }
+    commandLine(
+        python + layout.projectDirectory.file("scripts/verify_16kb_elf.py").asFile.absolutePath
+    )
+}
+
+subprojects {
+    tasks.matching { it.name == "check" || it.name == "preReleaseBuild" }.configureEach {
+        dependsOn(rootProject.tasks.named("verifyNativePageAlignment"))
+    }
 }
 
 val librariesToPublish = listOf("common", "library", "aria2c", "ffmpeg")
