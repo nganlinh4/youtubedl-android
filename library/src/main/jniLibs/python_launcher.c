@@ -21,6 +21,10 @@ typedef wchar_t* (*Py_DecodeLocale_fn)(const char*, size_t*);
 
 /* Try multiple Python sonames for compatibility */
 static const char* python_libs[] = {
+    "libpython3.13.so.1.0",
+    "libpython3.13.so",
+    "libpython3.12.so.1.0",
+    "libpython3.12.so",
     "libpython3.11.so.1.0",
     "libpython3.11.so",
     "libpython3.so",

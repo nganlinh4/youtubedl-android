@@ -1,0 +1,96 @@
+name: Build 16 KB FFmpeg frontends
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: ${{ matrix.abi }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - abi: arm64-v8a
+            termux_arch: aarch64
+            verify_16kb: true
+          - abi: armeabi-v7a
+            termux_arch: arm
+            verify_16kb: false
+          - abi: x86_64
+            termux_arch: x86_64
+            verify_16kb: true
+    steps:
+      - name: Check out pinned Termux Play package sources
+        run: |
+          git clone --filter=blob:none https://github.com/termux-play-store/termux-packages.git
+          cd termux-packages
+          git checkout 57401119f9988f79fa095398a9b33b03380222b3
+
+      - name: Configure minimal aligned native frontends
+        working-directory: termux-packages
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          ffmpeg = Path("packages/ffmpeg/build.sh")
+          source = ffmpeg.read_text()
+          needle = '\t\t--extra-libs="-landroid-glob" \\\n'
+          replacement = needle + '\t\t--extra-ldflags="-rdynamic" \\\n'
+          if source.count(needle) != 1:
+              raise SystemExit("FFmpeg configure insertion point changed")
+          ffmpeg.write_text(source.replace(needle, replacement))
+
+          libxml2 = Path("packages/libxml2/build.sh")
+          source = libxml2.read_text()
+          if source.count("-Dicu=enabled") != 1 or source.count(", libicu") != 1:
+              raise SystemExit("libxml2 ICU configuration changed")
+          libxml2.write_text(
+              source.replace("-Dicu=enabled", "-Dicu=disabled").replace(", libicu", "")
+          )
+          PY
+
+      - name: Build ICU-free libxml2 against NDK 29
+        working-directory: termux-packages
+        run: >-
+          ./scripts/run-docker.sh env TERMUX_ARCH=${{ matrix.termux_arch }}
+          ./build-package.sh -i libxml2
+
+      - name: Build FFmpeg against NDK 29 dependencies
+        working-directory: termux-packages
+        run: >-
+          ./scripts/run-docker.sh env TERMUX_ARCH=${{ matrix.termux_arch }}
+          ./build-package.sh -I ffmpeg
+
+      - name: Extract aligned frontends
+        working-directory: termux-packages
+        run: |
+          mkdir -p frontends/${{ matrix.abi }}
+          package=$(find output -maxdepth 1 -name 'ffmpeg_*.deb' -print -quit)
+          test -n "$package"
+          dpkg-deb -x "$package" extracted
+          cp extracted/data/data/com.termux/files/usr/bin/ffmpeg frontends/${{ matrix.abi }}/ffmpeg
+          cp extracted/data/data/com.termux/files/usr/bin/ffprobe frontends/${{ matrix.abi }}/ffprobe
+          libxml2=$(find output -maxdepth 1 -name 'libxml2_*.deb' -print -quit)
+          test -n "$libxml2"
+          cp "$libxml2" frontends/${{ matrix.abi }}/libxml2.deb
+          readelf -Ws --dyn-syms frontends/${{ matrix.abi }}/ffmpeg | grep -E '[[:space:]]main$'
+          readelf -Ws --dyn-syms frontends/${{ matrix.abi }}/ffprobe | grep -E '[[:space:]]main$'
+
+      - name: Verify 16 KB frontend alignment
+        if: matrix.verify_16kb
+        working-directory: termux-packages
+        run: |
+          for binary in frontends/${{ matrix.abi }}/ffmpeg frontends/${{ matrix.abi }}/ffprobe; do
+            readelf -Wl "$binary" | awk '$1 == "LOAD" { found = 1; if ($NF != "0x4000") exit 1 } END { if (!found) exit 1 }'
+          done
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ffmpeg-frontends-${{ matrix.abi }}
+          path: termux-packages/frontends/${{ matrix.abi }}
+          if-no-files-found: error
+          retention-days: 7

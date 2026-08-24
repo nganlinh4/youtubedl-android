@@ -1,0 +1,2297 @@
+{
+  "architectures": {
+    "arm64-v8a": {
+      "groups": {
+        "aria2c": [
+          {
+            "filename": "debs/stable/aarch64/l/libc++/libc++_29_aarch64.deb",
+            "name": "libc++",
+            "sha256": "d30854a6246f077ac6138d03a84b9ecb9f268376028c8b49874204bdc967a268",
+            "version": "29"
+          },
+          {
+            "filename": "debs/stable/aarch64/r/resolv-conf/resolv-conf_1.3_aarch64.deb",
+            "name": "resolv-conf",
+            "sha256": "61e8433a8a4eb6efdadcfb853d9244aa4811f6d15143150a4bf8bf88844ff1e6",
+            "version": "1.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/c/c-ares/c-ares_1.34.6_aarch64.deb",
+            "name": "c-ares",
+            "sha256": "dce950f66910289fe3de8f7ba0d74d385d83f7b961498aaa2931e0686903f0eb",
+            "version": "1.34.6"
+          },
+          {
+            "filename": "debs/stable/all/c/ca-certificates/ca-certificates_1:2026.05.14_all.deb",
+            "name": "ca-certificates",
+            "sha256": "0ff9b6c93df094e4b2fd95ae269a32383aaf89fa6117a11853124b50abd027cc",
+            "version": "1:2026.05.14"
+          },
+          {
+            "filename": "debs/stable/aarch64/z/zlib/zlib_1.3.2_aarch64.deb",
+            "name": "zlib",
+            "sha256": "12c701f2d5e3ce3ebc9dd42d5cf2172f76f02da012cbd53beeaec8c70fa81e6b",
+            "version": "1.3.2"
+          },
+          {
+            "filename": "debs/stable/aarch64/o/openssl/openssl_1:3.6.3_aarch64.deb",
+            "name": "openssl",
+            "sha256": "0cb19973c9ecbc1b95fd298a4250579c2052d7030a3220cfd14718f4617a6452",
+            "version": "1:3.6.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libandroid-glob/libandroid-glob_0.7-1_aarch64.deb",
+            "name": "libandroid-glob",
+            "sha256": "cb3c8f94418e63a1650c29979af6fd03458c06c2a579b0b9a9f2aa0c588185a6",
+            "version": "0.7-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libiconv/libiconv_1.18-1_aarch64.deb",
+            "name": "libiconv",
+            "sha256": "c78799b3186ccc09cfbb58dbc5ea8f5fa95c3c4b8bb054bee939e1624c6a233d",
+            "version": "1.18-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libicu/libicu_78.3_aarch64.deb",
+            "name": "libicu",
+            "sha256": "78c70e4feae468e276b07292354d1897e521f0cb215524dbef946360bf9525f2",
+            "version": "78.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libxml2/libxml2_2.15.3_aarch64.deb",
+            "name": "libxml2",
+            "sha256": "d93d0b299785f30413a6d9007f9033b21eb8434c35bf9db0b6a075dccd2dbf37",
+            "version": "2.15.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/a/aria2/aria2_1.37.0-3_aarch64.deb",
+            "name": "aria2",
+            "sha256": "89315fd0b8ad5b11bf0dbc3d43db6e34341879439cc1be83a92dbc3453167e42",
+            "version": "1.37.0-3"
+          }
+        ],
+        "ffmpeg": [
+          {
+            "filename": "debs/stable/aarch64/b/brotli/brotli_1.2.0_aarch64.deb",
+            "name": "brotli",
+            "sha256": "7286fe77c0d835577a94a481d967a70f82f3e3dd3e3ee910050cde211aa0093c",
+            "version": "1.2.0"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libbz2/libbz2_1.0.8-8_aarch64.deb",
+            "name": "libbz2",
+            "sha256": "a5997addbcc0f0028adf50e8c3f33de5395a64475eddf98fc6e56d02b19ae446",
+            "version": "1.0.8-8"
+          },
+          {
+            "filename": "debs/stable/aarch64/z/zlib/zlib_1.3.2_aarch64.deb",
+            "name": "zlib",
+            "sha256": "12c701f2d5e3ce3ebc9dd42d5cf2172f76f02da012cbd53beeaec8c70fa81e6b",
+            "version": "1.3.2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libpng/libpng_1.6.58_aarch64.deb",
+            "name": "libpng",
+            "sha256": "471f65567f7259a47f3dc56f2f420a430caad815362db1e893468eeee9797ac6",
+            "version": "1.6.58"
+          },
+          {
+            "filename": "debs/stable/aarch64/f/freetype/freetype_2.14.3_aarch64.deb",
+            "name": "freetype",
+            "sha256": "7c98bdbb7cff5a054902d5c3b4f7c01b132f2800e203fb5242f8b990126045de",
+            "version": "2.14.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libexpat/libexpat_2.8.1_aarch64.deb",
+            "name": "libexpat",
+            "sha256": "501c8b2c0ee9a9ef1eaf516ae041d8e9ceddbe1ecef12512773a0025e336e42e",
+            "version": "2.8.1"
+          },
+          {
+            "filename": "debs/stable/all/t/ttf-dejavu/ttf-dejavu_2.37-8_all.deb",
+            "name": "ttf-dejavu",
+            "sha256": "351033f14be574a336e428d2e0082737f3de30e2ea9f4874d22e8bf69916e757",
+            "version": "2.37-8"
+          },
+          {
+            "filename": "debs/stable/aarch64/f/fontconfig/fontconfig_2.18.1_aarch64.deb",
+            "name": "fontconfig",
+            "sha256": "2143d95cf2a8b52690a061710a6bca6ea63a68eb891b9e6c4a404856cafdf446",
+            "version": "2.18.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libandroid-support/libandroid-support_28_aarch64.deb",
+            "name": "libandroid-support",
+            "sha256": "4e167d77f8928df4fdf819dd96fe978b6610687ff1f41fc8d0449ba0262e7e0a",
+            "version": "28"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libffi/libffi_3.5.2_aarch64.deb",
+            "name": "libffi",
+            "sha256": "7af09489709d72a5c32f8248d2f4d6841195730500963822337f3bf88ea4be29",
+            "version": "3.5.2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libiconv/libiconv_1.18-1_aarch64.deb",
+            "name": "libiconv",
+            "sha256": "c78799b3186ccc09cfbb58dbc5ea8f5fa95c3c4b8bb054bee939e1624c6a233d",
+            "version": "1.18-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/p/pcre2/pcre2_10.47_aarch64.deb",
+            "name": "pcre2",
+            "sha256": "520894d48562ea77c951e302742e84289a8f7c35770ecea8b2e725f357079304",
+            "version": "10.47"
+          },
+          {
+            "filename": "debs/stable/aarch64/r/resolv-conf/resolv-conf_1.3_aarch64.deb",
+            "name": "resolv-conf",
+            "sha256": "61e8433a8a4eb6efdadcfb853d9244aa4811f6d15143150a4bf8bf88844ff1e6",
+            "version": "1.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/n/ncurses/ncurses_6.6.20260307+really6.5.20250830_aarch64.deb",
+            "name": "ncurses",
+            "sha256": "a56120a67e6e78f48b87275934cc5d0f6c73e3c728abaceffb36ae65eb0cd217",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/aarch64/r/readline/readline_8.3.3_aarch64.deb",
+            "name": "readline",
+            "sha256": "17b10c40efc5c30edafe4d376094774d055b9ef2b98b97582e16d3a3363d0aa5",
+            "version": "8.3.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/g/gdbm/gdbm_1.26-1_aarch64.deb",
+            "name": "gdbm",
+            "sha256": "851e901f13a37784c8eed357bf4d2747c1f2884c171b1ccdfb67b0ab5655cc44",
+            "version": "1.26-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libandroid-posix-semaphore/libandroid-posix-semaphore_0.1-4_aarch64.deb",
+            "name": "libandroid-posix-semaphore",
+            "sha256": "40624a6f9ca0b75b819818573152015d7e232bbd6ec89c70ffe7efc1befab1e6",
+            "version": "0.1-4"
+          },
+          {
+            "filename": "debs/stable/all/c/ca-certificates/ca-certificates_1:2026.05.14_all.deb",
+            "name": "ca-certificates",
+            "sha256": "0ff9b6c93df094e4b2fd95ae269a32383aaf89fa6117a11853124b50abd027cc",
+            "version": "1:2026.05.14"
+          },
+          {
+            "filename": "debs/stable/aarch64/o/openssl/openssl_1:3.6.3_aarch64.deb",
+            "name": "openssl",
+            "sha256": "0cb19973c9ecbc1b95fd298a4250579c2052d7030a3220cfd14718f4617a6452",
+            "version": "1:3.6.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libcrypt/libcrypt_0.2-6_aarch64.deb",
+            "name": "libcrypt",
+            "sha256": "fa03503d777941fadb5fa8ec4f3119c5373ff40eddadfdbc13c0f5a3d92adcff",
+            "version": "0.2-6"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/liblzma/liblzma_5.8.3_aarch64.deb",
+            "name": "liblzma",
+            "sha256": "bc1d560ea77f4fbb4b411279663490d8826a8b919e18927385c639725a0d5dbe",
+            "version": "5.8.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libsqlite/libsqlite_3.53.2_aarch64.deb",
+            "name": "libsqlite",
+            "sha256": "4582d73ce85be042efd302692acd93556e25b2e27cfd69f02a13704893798611",
+            "version": "3.53.2"
+          },
+          {
+            "filename": "debs/stable/aarch64/n/ncurses-ui-libs/ncurses-ui-libs_6.6.20260307+really6.5.20250830_aarch64.deb",
+            "name": "ncurses-ui-libs",
+            "sha256": "70a6a1d2d96d027d27b69f6ff0a9d596123090acc9a342e5e5db48296fe41530",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/aarch64/p/python/python_3.13.13-1_aarch64.deb",
+            "name": "python",
+            "sha256": "a0c616c13befdf48e2cfd9b201859d0cef6f43a8b68cc8622a7dae0836a6bc45",
+            "version": "3.13.13-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/g/glib/glib_2.88.1_aarch64.deb",
+            "name": "glib",
+            "sha256": "ba2f4f470ad37e36f22ec359a2b5f248777357d12b51d53aa086858412c97fbf",
+            "version": "2.88.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/f/fribidi/fribidi_1.0.16-1_aarch64.deb",
+            "name": "fribidi",
+            "sha256": "78bb97711639c72d9488ec01e2521a9938fbba28d3910f9a2fbb1ff1589af7ad",
+            "version": "1.0.16-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libc++/libc++_29_aarch64.deb",
+            "name": "libc++",
+            "sha256": "d30854a6246f077ac6138d03a84b9ecb9f268376028c8b49874204bdc967a268",
+            "version": "29"
+          },
+          {
+            "filename": "debs/stable/aarch64/g/game-music-emu/game-music-emu_0.6.5_aarch64.deb",
+            "name": "game-music-emu",
+            "sha256": "5c04f87f56c899c884ddca132c7cf1cfc10e8c7509cd2438e00e3e372670e7e6",
+            "version": "0.6.5"
+          },
+          {
+            "filename": "debs/stable/aarch64/g/glslang/glslang_16.3.0_aarch64.deb",
+            "name": "glslang",
+            "sha256": "b24adbcbd1dc5dc55804c59d74cecac82642f3a20261b73c94155f73081f6ce0",
+            "version": "16.3.0"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libandroid-shmem/libandroid-shmem_0.7_aarch64.deb",
+            "name": "libandroid-shmem",
+            "sha256": "08f045c296e24732ce8ab874f733918e6254988a38947fcfeba4b696c83aaed4",
+            "version": "0.7"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libandroid-execinfo/libandroid-execinfo_0.1-3_aarch64.deb",
+            "name": "libandroid-execinfo",
+            "sha256": "ff761f3975e5d0fc12b41274804a97ccfe23beac3e7e50c0d306ad84660a4668",
+            "version": "0.1-3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/liblzo/liblzo_2.10-5_aarch64.deb",
+            "name": "liblzo",
+            "sha256": "25c44ad392057068b11cd05d802bd807b9a964ff6d478ab05a161e2bb72d6094",
+            "version": "2.10-5"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libpixman/libpixman_0.46.4-1_aarch64.deb",
+            "name": "libpixman",
+            "sha256": "539a566fba76e8f2782d7e68df6de773e7df9a61bd4d867b9509367c676e0e61",
+            "version": "0.46.4-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libxau/libxau_1.0.12-2_aarch64.deb",
+            "name": "libxau",
+            "sha256": "d7455427606a0757b0d529993c13cd32ac0bb80c377caea7f9f8e5f46d5f87cb",
+            "version": "1.0.12-2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libxdmcp/libxdmcp_1.1.5-2_aarch64.deb",
+            "name": "libxdmcp",
+            "sha256": "93d054eacea114fbd62021e20837dfa6ec7b978ac47aac39b3ff30915368e226",
+            "version": "1.1.5-2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libxcb/libxcb_1.17.0-1_aarch64.deb",
+            "name": "libxcb",
+            "sha256": "564750e5313349fe465b95d25aaa31cb3ba252c08c4ff16096793542124570b0",
+            "version": "1.17.0-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libx11/libx11_1.8.13_aarch64.deb",
+            "name": "libx11",
+            "sha256": "054a84e1fe282591b3e1271598206c099bd44043d271f56cc39232aca51ca8dc",
+            "version": "1.8.13"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libxext/libxext_1.3.7_aarch64.deb",
+            "name": "libxext",
+            "sha256": "a4eb9091a2a42cede25d04531a62d73453c7b81358d535bca8995bd1e44de4df",
+            "version": "1.3.7"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libxrender/libxrender_0.9.12-1_aarch64.deb",
+            "name": "libxrender",
+            "sha256": "9841b7b88faf547e06834c675babb92385d269d1d18420a32021649f45879eba",
+            "version": "0.9.12-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libcairo/libcairo_1.18.4-2_aarch64.deb",
+            "name": "libcairo",
+            "sha256": "abf06f7c5e126126ed425d8cce84c7a98c2c2941a1bffc509891b41d5cf5d015",
+            "version": "1.18.4-2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libgraphite/libgraphite_1.3.15_aarch64.deb",
+            "name": "libgraphite",
+            "sha256": "52005214aa443504a7e4229d58edbe3d5d30a5a4b900511b94307df4d10a28b2",
+            "version": "1.3.15"
+          },
+          {
+            "filename": "debs/stable/aarch64/h/harfbuzz/harfbuzz_14.2.1_aarch64.deb",
+            "name": "harfbuzz",
+            "sha256": "f1af652809db0406c511021e3ae2bb11b08acb417ce7ad365ff902fd649f4a5d",
+            "version": "14.2.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libaom/libaom_3.14.1_aarch64.deb",
+            "name": "libaom",
+            "sha256": "476d32135b3b16029506b3b2299fa6cbfbca82df2f216f9f24702c9fbaf39238",
+            "version": "3.14.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libandroid-glob/libandroid-glob_0.7-1_aarch64.deb",
+            "name": "libandroid-glob",
+            "sha256": "cb3c8f94418e63a1650c29979af6fd03458c06c2a579b0b9a9f2aa0c588185a6",
+            "version": "0.7-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libandroid-stub/libandroid-stub_29-1_aarch64.deb",
+            "name": "libandroid-stub",
+            "sha256": "410036671ca70577efbf7d4b8a74536bb95fcfa7fee00e5fa257cfd545813745",
+            "version": "29-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libass/libass_0.17.5_aarch64.deb",
+            "name": "libass",
+            "sha256": "2521de1b7e0e3c03b29f378f5cf73cd05f04d554aae3f40afd1ec84ff778d8d6",
+            "version": "0.17.5"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libudfread/libudfread_1.2.0_aarch64.deb",
+            "name": "libudfread",
+            "sha256": "4ed893d263b4c01a57b83e1aaa3bf5b57526e23f34d4a1359cddf3ae1600d79c",
+            "version": "1.2.0"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libicu/libicu_78.3_aarch64.deb",
+            "name": "libicu",
+            "sha256": "78c70e4feae468e276b07292354d1897e521f0cb215524dbef946360bf9525f2",
+            "version": "78.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libxml2/libxml2_2.15.3_aarch64.deb",
+            "name": "libxml2",
+            "sha256": "d93d0b299785f30413a6d9007f9033b21eb8434c35bf9db0b6a075dccd2dbf37",
+            "version": "2.15.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libbluray/libbluray_1.4.1_aarch64.deb",
+            "name": "libbluray",
+            "sha256": "3cfa99969e9b52f9ca91a2ef21abb95ebbcaadf08aa4e2ea030e9c350881f8ff",
+            "version": "1.4.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libogg/libogg_1.3.6-1_aarch64.deb",
+            "name": "libogg",
+            "sha256": "6ce6eb22d6c11835c500d7f22dddffb2fc0e7cd41a7168ea95144ead0652e0ea",
+            "version": "1.3.6-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libflac/libflac_1.5.0-1_aarch64.deb",
+            "name": "libflac",
+            "sha256": "65f87770fe5e8d825a2d1e44d9d0f319ced1be07d7972aa381ca06560d77d37d",
+            "version": "1.5.0-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libmp3lame/libmp3lame_3.100-7_aarch64.deb",
+            "name": "libmp3lame",
+            "sha256": "c8cb7ebb76ffe0a6d8e4f6893de62f754bc2ccad2feb56a7cd8b30bd3aacd410",
+            "version": "3.100-7"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libopus/libopus_1.6.1_aarch64.deb",
+            "name": "libopus",
+            "sha256": "7212be99e5fb0b854381eed5ea916c211f97a3d3b929f0ac9a2063ec412e3fae",
+            "version": "1.6.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libvorbis/libvorbis_1.3.7-4_aarch64.deb",
+            "name": "libvorbis",
+            "sha256": "17fa10bcc0a6e6d891a24785096133b49466cfda3dd6a4e152e51c9748bc1f16",
+            "version": "1.3.7-4"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libsndfile/libsndfile_1.2.2-2_aarch64.deb",
+            "name": "libsndfile",
+            "sha256": "7df517891b95c73fe53b14d2cfd99716a3f772ededd32e33f0895bc3df69a317",
+            "version": "1.2.2-2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libbs2b/libbs2b_3.1.0-2_aarch64.deb",
+            "name": "libbs2b",
+            "sha256": "9516801be5ecab3550c40b5a368063fe5363d40381b2441b42eb7888dafcd2db",
+            "version": "3.1.0-2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libdav1d/libdav1d_1.5.3_aarch64.deb",
+            "name": "libdav1d",
+            "sha256": "ade255c144b696f4adc65d5094b2ff91032a94d38f6f9f7cd2d3e9d2d0e9445c",
+            "version": "1.5.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libmysofa/libmysofa_1.3.4-1_aarch64.deb",
+            "name": "libmysofa",
+            "sha256": "8a599ef3e6ca0c793070e07361b53f9ead46c200d76d46f154397ccf051c5190",
+            "version": "1.3.4-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libopencore-amr/libopencore-amr_0.1.6-1_aarch64.deb",
+            "name": "libopencore-amr",
+            "sha256": "9382b44e9c0010317b5f6a8bb8a4bb258a33843d345629472c3f6d90bbe9539e",
+            "version": "0.1.6-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libmpg123/libmpg123_1.33.3_aarch64.deb",
+            "name": "libmpg123",
+            "sha256": "25380164fd619f1edc87b8aeb9a13d2066a324b1bac96e7a2b7006c159105577",
+            "version": "1.33.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libopenmpt/libopenmpt_0.8.7_aarch64.deb",
+            "name": "libopenmpt",
+            "sha256": "e5560379c24e8ed50a544f43a31984c39bd7c2f72f2f47ea2f7ada9011e80c51",
+            "version": "0.8.7"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/littlecms/littlecms_2.19.1_aarch64.deb",
+            "name": "littlecms",
+            "sha256": "4830295e4aee9111d46a3c8aaf199bfa1c3f845ea3076d32027494dc3b269930",
+            "version": "2.19.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libdrm/libdrm_2.4.134_aarch64.deb",
+            "name": "libdrm",
+            "sha256": "2432004ecd2e87d495d57fe9c11423897894efddf925270aee8c20d3eb7012fb",
+            "version": "2.4.134"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libxshmfence/libxshmfence_1.3.3-1_aarch64.deb",
+            "name": "libxshmfence",
+            "sha256": "6c21c1ac5d2ec510e5b73c7b4a52d99feed7bdb7b613c9d7b9b664c65a285aef",
+            "version": "1.3.3-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libwayland/libwayland_1.25.0_aarch64.deb",
+            "name": "libwayland",
+            "sha256": "1fe1ff9ec0f28ea744befc6df740b9877db99aa513e61a589e99cb9550ba5f1a",
+            "version": "1.25.0"
+          },
+          {
+            "filename": "debs/stable/aarch64/v/vulkan-loader-generic/vulkan-loader-generic_1.4.354_aarch64.deb",
+            "name": "vulkan-loader-generic",
+            "sha256": "d34014cf30d23af95b79addb771ce8f9f7ae15aa2fbc90d068354c9e2c8f661c",
+            "version": "1.4.354"
+          },
+          {
+            "filename": "debs/stable/aarch64/z/zstd/zstd_1.5.7-1_aarch64.deb",
+            "name": "zstd",
+            "sha256": "b63689e1cc434f5b763daa110c125bee25853199709faac1de9c03aff69d698c",
+            "version": "1.5.7-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/m/mesa-vulkan-icd-swrast/mesa-vulkan-icd-swrast_26.0.6-1_aarch64.deb",
+            "name": "mesa-vulkan-icd-swrast",
+            "sha256": "47ae19f4c682624027eaa377fbbaee4477ad612bf061454e937943b5856780ca",
+            "version": "26.0.6-1"
+          },
+          {
+            "filename": "debs/stable/all/v/vulkan-icd/vulkan-icd_0.1_all.deb",
+            "name": "vulkan-icd",
+            "sha256": "5f07beec0c57add366c64d71731a0630c596573a418dbcb605ede5e63df49563",
+            "version": "0.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libplacebo/libplacebo_7.360.1_aarch64.deb",
+            "name": "libplacebo",
+            "sha256": "636451b525fb7ed7918d0c5ea5a8284c23354409ab1a3dfcc63b059b1406afdb",
+            "version": "7.360.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/librav1e/librav1e_0.8.1_aarch64.deb",
+            "name": "librav1e",
+            "sha256": "8f64e30ace5129ecea5fa24235fee56964da6ffa0f28fc44bc589eb7df848250",
+            "version": "0.8.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libsoxr/libsoxr_0.1.3-8_aarch64.deb",
+            "name": "libsoxr",
+            "sha256": "bfec8a33cff8dd9240d170bedd254d423ce5c22fb43b4828f8de458c5c2b8555",
+            "version": "0.1.3-8"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libsrt/libsrt_1.5.5_aarch64.deb",
+            "name": "libsrt",
+            "sha256": "98c4ef7e69045ce88a5600da2465af6d38f71eb04a1bd88e8d03b27b649b4478",
+            "version": "1.5.5"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libssh/libssh_0.12.0-1_aarch64.deb",
+            "name": "libssh",
+            "sha256": "1ade0ce0de07897b7186d0fc32e4a087366733ddb717aa2a620a9f142d2d5f34",
+            "version": "0.12.0-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libtheora/libtheora_1.2.0-1_aarch64.deb",
+            "name": "libtheora",
+            "sha256": "40508dd9ebd31c48ac1f9f1a3b3ad1e8d096eb471c831c8159ede515b4bfb0fa",
+            "version": "1.2.0-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libjpeg-turbo/libjpeg-turbo_3.1.4.1_aarch64.deb",
+            "name": "libjpeg-turbo",
+            "sha256": "b6683e8ea2ac943cac42e828163d4d723850235b1e74eaeafc161c9661a59b55",
+            "version": "3.1.4.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libv4l/libv4l_1.24.1-2_aarch64.deb",
+            "name": "libv4l",
+            "sha256": "f81ee3ede5a4dbb9c46c460c8c5f2cc49798e16fdd0b42dd517d3dc66faf019c",
+            "version": "1.24.1-2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libvidstab/libvidstab_1.1.1-3_aarch64.deb",
+            "name": "libvidstab",
+            "sha256": "ea97e4c50bd9fb419c46690560fb05ea7949181c200672750d183809b355c04c",
+            "version": "1.1.1-3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libvmaf/libvmaf_3.2.0_aarch64.deb",
+            "name": "libvmaf",
+            "sha256": "67322cc35601dae87fc92d5d65893a9cc69bf19acd31edf67cc5730eac0858d2",
+            "version": "3.2.0"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libvo-amrwbenc/libvo-amrwbenc_0.1.3-2_aarch64.deb",
+            "name": "libvo-amrwbenc",
+            "sha256": "3fa169012eaebc7efae7fdb007af9a1883b6ca6e19e2ae5245288767e0baea9f",
+            "version": "0.1.3-2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libvpx/libvpx_1:1.16.0_aarch64.deb",
+            "name": "libvpx",
+            "sha256": "830139e69b81fc38b30e69255a232033e4bf04d7bfc1c34d2d10f913e571000d",
+            "version": "1:1.16.0"
+          },
+          {
+            "filename": "debs/stable/aarch64/g/giflib/giflib_5.2.2-2_aarch64.deb",
+            "name": "giflib",
+            "sha256": "ae24f13dc71d1e48dc76bf58ec280f62a35a9542625114b3c4023e3cabb67d73",
+            "version": "5.2.2-2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libtiff/libtiff_4.7.1_aarch64.deb",
+            "name": "libtiff",
+            "sha256": "63e96dbe243e8b8f7757e0aaae7130290430248be59b9a45bc8ecf1a4bb5c15b",
+            "version": "4.7.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libwebp/libwebp_1.6.0-1_aarch64.deb",
+            "name": "libwebp",
+            "sha256": "efc44c5da6cecfaea4fd434349c3c00762ccafdf24fe2af7d24b324ea6dee346",
+            "version": "1.6.0-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libx264/libx264_1:0.164.3191-1_aarch64.deb",
+            "name": "libx264",
+            "sha256": "0dc35dbfee516af4da50539a81d41852b56738df691104a5ae8a5fee774093a7",
+            "version": "1:0.164.3191-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libx265/libx265_4.2_aarch64.deb",
+            "name": "libx265",
+            "sha256": "4e46bca9c925270a52e28bd2be5eab7495baf1f690f9219af368c5b12102eaab",
+            "version": "4.2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libzimg/libzimg_3.0.6_aarch64.deb",
+            "name": "libzimg",
+            "sha256": "bbeb3d8983a15cc33cc9f74548d691952cc58553dc6cdb136c8651ad5f3de88c",
+            "version": "3.0.6"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libsodium/libsodium_1.0.22-1_aarch64.deb",
+            "name": "libsodium",
+            "sha256": "5e3ab12a556e85a171d6dd34025fdbf621ceba8c9b5aefb5a82c9dd314f830cc",
+            "version": "1.0.22-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libzmq/libzmq_4.3.5-2_aarch64.deb",
+            "name": "libzmq",
+            "sha256": "fe45f7e1f2e16f1ca00533bc67b9b54bc57417cf7dc05724f05eafc4efcbfa18",
+            "version": "4.3.5-2"
+          },
+          {
+            "filename": "debs/stable/aarch64/o/ocl-icd/ocl-icd_2.3.5_aarch64.deb",
+            "name": "ocl-icd",
+            "sha256": "40360d09bb0f6ed2a38003ba0be97d2771c166030bcba94fbd062800a5d226c4",
+            "version": "2.3.5"
+          },
+          {
+            "filename": "debs/stable/aarch64/f/fftw/fftw_3.3.11_aarch64.deb",
+            "name": "fftw",
+            "sha256": "bb8f7aab017de5ab687e5a16abd50f362461886fa0df5e65e7ad7741903c423d",
+            "version": "3.3.11"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libsamplerate/libsamplerate_0.2.2-4_aarch64.deb",
+            "name": "libsamplerate",
+            "sha256": "e9ae23a356c98d51da21f0bc3a857c0da4d9cd69020fc8700fc27df99626a45c",
+            "version": "0.2.2-4"
+          },
+          {
+            "filename": "debs/stable/aarch64/r/rubberband/rubberband_4.0.0-1_aarch64.deb",
+            "name": "rubberband",
+            "sha256": "14425cb066e0c7532c2c8d10462c5458ba8334508c0bfa0da6897be82fba281b",
+            "version": "4.0.0-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/s/svt-av1/svt-av1_4.1.0_aarch64.deb",
+            "name": "svt-av1",
+            "sha256": "a65a044ee38a644fadc780309dcacc8ce97cce754b075710d4ce388bd037173b",
+            "version": "4.1.0"
+          },
+          {
+            "filename": "debs/stable/aarch64/x/xvidcore/xvidcore_1.3.7-1_aarch64.deb",
+            "name": "xvidcore",
+            "sha256": "df4ab0f59ca00e2df0f05df188acd6e1453035a9d9a82d403057f3e5b2870ce1",
+            "version": "1.3.7-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/f/ffmpeg/ffmpeg_8.1.2_aarch64.deb",
+            "name": "ffmpeg",
+            "sha256": "45f4e4d014a8d186a2ba298008d3e46379e9a01e88aba84aa549237458c58ac1",
+            "version": "8.1.2"
+          }
+        ],
+        "python": [
+          {
+            "filename": "debs/stable/aarch64/n/ncurses/ncurses_6.6.20260307+really6.5.20250830_aarch64.deb",
+            "name": "ncurses",
+            "sha256": "a56120a67e6e78f48b87275934cc5d0f6c73e3c728abaceffb36ae65eb0cd217",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/aarch64/r/readline/readline_8.3.3_aarch64.deb",
+            "name": "readline",
+            "sha256": "17b10c40efc5c30edafe4d376094774d055b9ef2b98b97582e16d3a3363d0aa5",
+            "version": "8.3.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/g/gdbm/gdbm_1.26-1_aarch64.deb",
+            "name": "gdbm",
+            "sha256": "851e901f13a37784c8eed357bf4d2747c1f2884c171b1ccdfb67b0ab5655cc44",
+            "version": "1.26-1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libandroid-posix-semaphore/libandroid-posix-semaphore_0.1-4_aarch64.deb",
+            "name": "libandroid-posix-semaphore",
+            "sha256": "40624a6f9ca0b75b819818573152015d7e232bbd6ec89c70ffe7efc1befab1e6",
+            "version": "0.1-4"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libbz2/libbz2_1.0.8-8_aarch64.deb",
+            "name": "libbz2",
+            "sha256": "a5997addbcc0f0028adf50e8c3f33de5395a64475eddf98fc6e56d02b19ae446",
+            "version": "1.0.8-8"
+          },
+          {
+            "filename": "debs/stable/all/c/ca-certificates/ca-certificates_1:2026.05.14_all.deb",
+            "name": "ca-certificates",
+            "sha256": "0ff9b6c93df094e4b2fd95ae269a32383aaf89fa6117a11853124b50abd027cc",
+            "version": "1:2026.05.14"
+          },
+          {
+            "filename": "debs/stable/aarch64/z/zlib/zlib_1.3.2_aarch64.deb",
+            "name": "zlib",
+            "sha256": "12c701f2d5e3ce3ebc9dd42d5cf2172f76f02da012cbd53beeaec8c70fa81e6b",
+            "version": "1.3.2"
+          },
+          {
+            "filename": "debs/stable/aarch64/o/openssl/openssl_1:3.6.3_aarch64.deb",
+            "name": "openssl",
+            "sha256": "0cb19973c9ecbc1b95fd298a4250579c2052d7030a3220cfd14718f4617a6452",
+            "version": "1:3.6.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libcrypt/libcrypt_0.2-6_aarch64.deb",
+            "name": "libcrypt",
+            "sha256": "fa03503d777941fadb5fa8ec4f3119c5373ff40eddadfdbc13c0f5a3d92adcff",
+            "version": "0.2-6"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libexpat/libexpat_2.8.1_aarch64.deb",
+            "name": "libexpat",
+            "sha256": "501c8b2c0ee9a9ef1eaf516ae041d8e9ceddbe1ecef12512773a0025e336e42e",
+            "version": "2.8.1"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libffi/libffi_3.5.2_aarch64.deb",
+            "name": "libffi",
+            "sha256": "7af09489709d72a5c32f8248d2f4d6841195730500963822337f3bf88ea4be29",
+            "version": "3.5.2"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/liblzma/liblzma_5.8.3_aarch64.deb",
+            "name": "liblzma",
+            "sha256": "bc1d560ea77f4fbb4b411279663490d8826a8b919e18927385c639725a0d5dbe",
+            "version": "5.8.3"
+          },
+          {
+            "filename": "debs/stable/aarch64/l/libsqlite/libsqlite_3.53.2_aarch64.deb",
+            "name": "libsqlite",
+            "sha256": "4582d73ce85be042efd302692acd93556e25b2e27cfd69f02a13704893798611",
+            "version": "3.53.2"
+          },
+          {
+            "filename": "debs/stable/aarch64/n/ncurses-ui-libs/ncurses-ui-libs_6.6.20260307+really6.5.20250830_aarch64.deb",
+            "name": "ncurses-ui-libs",
+            "sha256": "70a6a1d2d96d027d27b69f6ff0a9d596123090acc9a342e5e5db48296fe41530",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/aarch64/p/python/python_3.13.13-1_aarch64.deb",
+            "name": "python",
+            "sha256": "a0c616c13befdf48e2cfd9b201859d0cef6f43a8b68cc8622a7dae0836a6bc45",
+            "version": "3.13.13-1"
+          },
+          {
+            "filename": "debs/stable/all/p/python-pip/python-pip_26.1.2_all.deb",
+            "name": "python-pip",
+            "sha256": "5f34382fa79a4e46585b3cdfbc6138439ca9298242eaca1025dd2ddaaa1083c8",
+            "version": "26.1.2"
+          },
+          {
+            "filename": "debs/stable/aarch64/p/python-pycryptodomex/python-pycryptodomex_3.23.0-3_aarch64.deb",
+            "name": "python-pycryptodomex",
+            "sha256": "e7efc535f6c88f15ce64df975359b42a2511a5c3da1c3c432d4ffa0b34f66977",
+            "version": "3.23.0-3"
+          }
+        ]
+      },
+      "packageIndexSha256": "07a996af8c4a0e2fa1a5b1b202e89be773a55035572e1d4cefeef9b1cf751e95",
+      "termuxArchitecture": "aarch64"
+    },
+    "armeabi-v7a": {
+      "groups": {
+        "aria2c": [
+          {
+            "filename": "debs/stable/arm/l/libc++/libc++_29_arm.deb",
+            "name": "libc++",
+            "sha256": "ca4c258b52919d15b4942c12fa3df0a8df2484ec8797e10705159de72c2a09d2",
+            "version": "29"
+          },
+          {
+            "filename": "debs/stable/arm/r/resolv-conf/resolv-conf_1.3_arm.deb",
+            "name": "resolv-conf",
+            "sha256": "5a7e6a38781515bda46309dd876592b347fab209953b5103096bdacf4d4c9a30",
+            "version": "1.3"
+          },
+          {
+            "filename": "debs/stable/arm/c/c-ares/c-ares_1.34.6_arm.deb",
+            "name": "c-ares",
+            "sha256": "c7a0ad215166e13fed43a4389dbca05335c5077346ec512885ab986a11b2328c",
+            "version": "1.34.6"
+          },
+          {
+            "filename": "debs/stable/all/c/ca-certificates/ca-certificates_1:2026.05.14_all.deb",
+            "name": "ca-certificates",
+            "sha256": "0ff9b6c93df094e4b2fd95ae269a32383aaf89fa6117a11853124b50abd027cc",
+            "version": "1:2026.05.14"
+          },
+          {
+            "filename": "debs/stable/arm/z/zlib/zlib_1.3.2_arm.deb",
+            "name": "zlib",
+            "sha256": "91068985ec585baf8ab0e6a19dd9a9f34693a17b79d9f94f7f646c1246c0c10c",
+            "version": "1.3.2"
+          },
+          {
+            "filename": "debs/stable/arm/o/openssl/openssl_1:3.6.3_arm.deb",
+            "name": "openssl",
+            "sha256": "f33e0348e57eb5b0ba835a771624849ff848c514f1065856c69a31cf7c97f813",
+            "version": "1:3.6.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libandroid-glob/libandroid-glob_0.7-1_arm.deb",
+            "name": "libandroid-glob",
+            "sha256": "90d26c1ca756f801e1d64bf8825e5e2a5b7b97fd7f4b807897c826df66244107",
+            "version": "0.7-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libiconv/libiconv_1.18-1_arm.deb",
+            "name": "libiconv",
+            "sha256": "5d2e2ecf9c03102bcd78c61a6fffcce0c73a8087d44dfae3b53ee765bd606e93",
+            "version": "1.18-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libicu/libicu_78.3_arm.deb",
+            "name": "libicu",
+            "sha256": "812a92514d4b9426bc407724a96809060023fc5c565ee3e71aba557a317b7dd4",
+            "version": "78.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libxml2/libxml2_2.15.3_arm.deb",
+            "name": "libxml2",
+            "sha256": "e54a6d761502618ee21791be9cba6075a7e30a0811626db02ef56ccf5c8f7910",
+            "version": "2.15.3"
+          },
+          {
+            "filename": "debs/stable/arm/a/aria2/aria2_1.37.0-3_arm.deb",
+            "name": "aria2",
+            "sha256": "49dcf75b131ccb6f65a0f1a914882f17a3e6f6180855cdc943ca9c795e655f54",
+            "version": "1.37.0-3"
+          }
+        ],
+        "ffmpeg": [
+          {
+            "filename": "debs/stable/arm/b/brotli/brotli_1.2.0_arm.deb",
+            "name": "brotli",
+            "sha256": "77544129a7f36cccc8dcd75c122c2a6ec423e930dd903f69c2d847d310808618",
+            "version": "1.2.0"
+          },
+          {
+            "filename": "debs/stable/arm/l/libbz2/libbz2_1.0.8-8_arm.deb",
+            "name": "libbz2",
+            "sha256": "a076dbb5a8ce18ccc0b1d09febcd584fb27c7774321c6ce14179e19e5b331ca8",
+            "version": "1.0.8-8"
+          },
+          {
+            "filename": "debs/stable/arm/z/zlib/zlib_1.3.2_arm.deb",
+            "name": "zlib",
+            "sha256": "91068985ec585baf8ab0e6a19dd9a9f34693a17b79d9f94f7f646c1246c0c10c",
+            "version": "1.3.2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libpng/libpng_1.6.58_arm.deb",
+            "name": "libpng",
+            "sha256": "55c18dac398a0db9575c22e139c069164bc94bd85217627de0e247cef73a0e52",
+            "version": "1.6.58"
+          },
+          {
+            "filename": "debs/stable/arm/f/freetype/freetype_2.14.3_arm.deb",
+            "name": "freetype",
+            "sha256": "373a6fea0f369eec5a496788d8452a98dc3a35a371230bb0451e88d5d227be54",
+            "version": "2.14.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libexpat/libexpat_2.8.1_arm.deb",
+            "name": "libexpat",
+            "sha256": "fbde86ac0e3d117107d1e747f276f402b492ffdf05a507cfd49f9684b8d545e6",
+            "version": "2.8.1"
+          },
+          {
+            "filename": "debs/stable/all/t/ttf-dejavu/ttf-dejavu_2.37-8_all.deb",
+            "name": "ttf-dejavu",
+            "sha256": "351033f14be574a336e428d2e0082737f3de30e2ea9f4874d22e8bf69916e757",
+            "version": "2.37-8"
+          },
+          {
+            "filename": "debs/stable/arm/f/fontconfig/fontconfig_2.18.1_arm.deb",
+            "name": "fontconfig",
+            "sha256": "75edc3afc690f770f0f03078cc6ee406906198a2ca98a603e33d32b0f43f9260",
+            "version": "2.18.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libandroid-support/libandroid-support_28_arm.deb",
+            "name": "libandroid-support",
+            "sha256": "af88f6720d949b36b5415a32d4402d8305f8e2135dbddf48598ba3fb67d756c4",
+            "version": "28"
+          },
+          {
+            "filename": "debs/stable/arm/l/libffi/libffi_3.5.2_arm.deb",
+            "name": "libffi",
+            "sha256": "6c52517113e78ad072b4189a486dd384f19577b6de48d771a36715d0cc6f1975",
+            "version": "3.5.2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libiconv/libiconv_1.18-1_arm.deb",
+            "name": "libiconv",
+            "sha256": "5d2e2ecf9c03102bcd78c61a6fffcce0c73a8087d44dfae3b53ee765bd606e93",
+            "version": "1.18-1"
+          },
+          {
+            "filename": "debs/stable/arm/p/pcre2/pcre2_10.47_arm.deb",
+            "name": "pcre2",
+            "sha256": "ffd8d78c99b611c76790eb5ad38a35349159b3999632ecfe0ba589279dd58849",
+            "version": "10.47"
+          },
+          {
+            "filename": "debs/stable/arm/r/resolv-conf/resolv-conf_1.3_arm.deb",
+            "name": "resolv-conf",
+            "sha256": "5a7e6a38781515bda46309dd876592b347fab209953b5103096bdacf4d4c9a30",
+            "version": "1.3"
+          },
+          {
+            "filename": "debs/stable/arm/n/ncurses/ncurses_6.6.20260307+really6.5.20250830_arm.deb",
+            "name": "ncurses",
+            "sha256": "3dd5183412ea9caf2baf49daf27cb75c5a82e844bd0f97016eb9b447c4e83683",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/arm/r/readline/readline_8.3.3_arm.deb",
+            "name": "readline",
+            "sha256": "871298eb22b0edab1df7137eb516db20aae777e9e4f60c62958236885d89cc99",
+            "version": "8.3.3"
+          },
+          {
+            "filename": "debs/stable/arm/g/gdbm/gdbm_1.26-1_arm.deb",
+            "name": "gdbm",
+            "sha256": "472a0fce596dc5cc2df13ac07ce77e3e7eb35f19c4c3dc751fae2b24e9b45290",
+            "version": "1.26-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libandroid-posix-semaphore/libandroid-posix-semaphore_0.1-4_arm.deb",
+            "name": "libandroid-posix-semaphore",
+            "sha256": "2221de523551da8734b887c908c5c947e97c2409ddc8b58af91426503e13db05",
+            "version": "0.1-4"
+          },
+          {
+            "filename": "debs/stable/all/c/ca-certificates/ca-certificates_1:2026.05.14_all.deb",
+            "name": "ca-certificates",
+            "sha256": "0ff9b6c93df094e4b2fd95ae269a32383aaf89fa6117a11853124b50abd027cc",
+            "version": "1:2026.05.14"
+          },
+          {
+            "filename": "debs/stable/arm/o/openssl/openssl_1:3.6.3_arm.deb",
+            "name": "openssl",
+            "sha256": "f33e0348e57eb5b0ba835a771624849ff848c514f1065856c69a31cf7c97f813",
+            "version": "1:3.6.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libcrypt/libcrypt_0.2-6_arm.deb",
+            "name": "libcrypt",
+            "sha256": "98918d68ed481fd8499cb05a26ceb14ee2f92d3038d850a6638a8fec2cba3ed1",
+            "version": "0.2-6"
+          },
+          {
+            "filename": "debs/stable/arm/l/liblzma/liblzma_5.8.3_arm.deb",
+            "name": "liblzma",
+            "sha256": "ab263fbbdf0269cf088788f54d7d4fdf8477e137c5808f25e7053c1cd2cb9eb7",
+            "version": "5.8.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libsqlite/libsqlite_3.53.2_arm.deb",
+            "name": "libsqlite",
+            "sha256": "084cd943e5c89c0a9e744772564ee5b35fd3e673159a69d4e8a57c4a4465eba6",
+            "version": "3.53.2"
+          },
+          {
+            "filename": "debs/stable/arm/n/ncurses-ui-libs/ncurses-ui-libs_6.6.20260307+really6.5.20250830_arm.deb",
+            "name": "ncurses-ui-libs",
+            "sha256": "6d1ff4b1c130e53f5bf09ee5946df8eba76c6b9e9172f782efd005ef2f96b229",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/arm/p/python/python_3.13.13-1_arm.deb",
+            "name": "python",
+            "sha256": "335ef52c947e1491154171c95fbf4bca9bdbdcd93c13352e38952a8e26b80e27",
+            "version": "3.13.13-1"
+          },
+          {
+            "filename": "debs/stable/arm/g/glib/glib_2.88.1_arm.deb",
+            "name": "glib",
+            "sha256": "ba916e577ec5679ab23b59642e3aef638058df389435ffea108508181a0230a9",
+            "version": "2.88.1"
+          },
+          {
+            "filename": "debs/stable/arm/f/fribidi/fribidi_1.0.16-1_arm.deb",
+            "name": "fribidi",
+            "sha256": "e01e75f9aa0a44885ece9abf05478f04ccd356f90b2b264496438c32635f2ec0",
+            "version": "1.0.16-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libc++/libc++_29_arm.deb",
+            "name": "libc++",
+            "sha256": "ca4c258b52919d15b4942c12fa3df0a8df2484ec8797e10705159de72c2a09d2",
+            "version": "29"
+          },
+          {
+            "filename": "debs/stable/arm/g/game-music-emu/game-music-emu_0.6.5_arm.deb",
+            "name": "game-music-emu",
+            "sha256": "21249e5ecb486568da3838bcb4fd2abac9ef75485721bfd69d62de27a425304a",
+            "version": "0.6.5"
+          },
+          {
+            "filename": "debs/stable/arm/g/glslang/glslang_16.3.0_arm.deb",
+            "name": "glslang",
+            "sha256": "864351e07f79944b84211cca6edf042a3e8f1c2e5788293600976796ca775020",
+            "version": "16.3.0"
+          },
+          {
+            "filename": "debs/stable/arm/l/libandroid-shmem/libandroid-shmem_0.7_arm.deb",
+            "name": "libandroid-shmem",
+            "sha256": "d4acdd8739249ddac98e985df6964a9396799ca04a498a8f84a2b4b407f77e9f",
+            "version": "0.7"
+          },
+          {
+            "filename": "debs/stable/arm/l/libandroid-execinfo/libandroid-execinfo_0.1-3_arm.deb",
+            "name": "libandroid-execinfo",
+            "sha256": "2c1b7e2cf0fac6097a15f4a47fc0be53483cad9e850cf3fb3d57ea137b4175e2",
+            "version": "0.1-3"
+          },
+          {
+            "filename": "debs/stable/arm/l/liblzo/liblzo_2.10-5_arm.deb",
+            "name": "liblzo",
+            "sha256": "a6adeddc9a06dcbfdbbc1fcecb1ad16184dc0cd5f0fbc71949d7db347ea5efd6",
+            "version": "2.10-5"
+          },
+          {
+            "filename": "debs/stable/arm/l/libpixman/libpixman_0.46.4-1_arm.deb",
+            "name": "libpixman",
+            "sha256": "e4e546a731566f1e5db9c5081bb1f886bd24c3ead3b525a7b2bba87668f26506",
+            "version": "0.46.4-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libxau/libxau_1.0.12-2_arm.deb",
+            "name": "libxau",
+            "sha256": "79da708a8a3aaed24ade959ad89682c10bd587cf745d3c2b55526d450133eaf0",
+            "version": "1.0.12-2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libxdmcp/libxdmcp_1.1.5-2_arm.deb",
+            "name": "libxdmcp",
+            "sha256": "4fc2fb1d14f7d1bd5e736a8b782d16d12c6408651c9e37526550459145c20547",
+            "version": "1.1.5-2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libxcb/libxcb_1.17.0-1_arm.deb",
+            "name": "libxcb",
+            "sha256": "4394dcffdb600b90a338ddb94ea561410f4429b7d0cdca31db08c716600ad2bf",
+            "version": "1.17.0-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libx11/libx11_1.8.13_arm.deb",
+            "name": "libx11",
+            "sha256": "e82dd0e9a977148b4f3481f0872abeee750a355d9f39ef3c49260cc52ef5a237",
+            "version": "1.8.13"
+          },
+          {
+            "filename": "debs/stable/arm/l/libxext/libxext_1.3.7_arm.deb",
+            "name": "libxext",
+            "sha256": "1dc29bca6973e5f282f6a095f19cccda56188eb1d79029d3f23984e924dc8159",
+            "version": "1.3.7"
+          },
+          {
+            "filename": "debs/stable/arm/l/libxrender/libxrender_0.9.12-1_arm.deb",
+            "name": "libxrender",
+            "sha256": "8bd7cf49a4cc13d33181b186dde8b0aff96da658b855e283c81b2213f12be366",
+            "version": "0.9.12-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libcairo/libcairo_1.18.4-2_arm.deb",
+            "name": "libcairo",
+            "sha256": "67f06f23405c4142c41f30f0da95436357d9412dce2cbae421a7755c51cae8a9",
+            "version": "1.18.4-2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libgraphite/libgraphite_1.3.15_arm.deb",
+            "name": "libgraphite",
+            "sha256": "f060e7f2fe00b88d58f4fd403a454dbb4f82b73b3f95c59f27bb12ee064cbd0c",
+            "version": "1.3.15"
+          },
+          {
+            "filename": "debs/stable/arm/h/harfbuzz/harfbuzz_14.2.1_arm.deb",
+            "name": "harfbuzz",
+            "sha256": "39855ba6da33d920e818980ca2db30b03277b6efba673fbc962e7236b0cb705f",
+            "version": "14.2.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libaom/libaom_3.14.1_arm.deb",
+            "name": "libaom",
+            "sha256": "cc543e8d28ae08ba6b51f08eca2debcc28b1e88a9ac7faa31c683e42d97ddbfb",
+            "version": "3.14.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libandroid-glob/libandroid-glob_0.7-1_arm.deb",
+            "name": "libandroid-glob",
+            "sha256": "90d26c1ca756f801e1d64bf8825e5e2a5b7b97fd7f4b807897c826df66244107",
+            "version": "0.7-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libandroid-stub/libandroid-stub_29-1_arm.deb",
+            "name": "libandroid-stub",
+            "sha256": "2f39e094ef63ac84a89bc68f46ea5a40e935a7711aa69fbb4567e6267d6c7d9a",
+            "version": "29-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libass/libass_0.17.5_arm.deb",
+            "name": "libass",
+            "sha256": "572441f8406dead52d1e38b2a1e6770802736e98ffbd5c1dfefb2ebc50d5cea1",
+            "version": "0.17.5"
+          },
+          {
+            "filename": "debs/stable/arm/l/libudfread/libudfread_1.2.0_arm.deb",
+            "name": "libudfread",
+            "sha256": "cddf463c1e62977d238e7c0ebdcdaa8ffb7b357b79bf84de5a369cc25b4e1f7a",
+            "version": "1.2.0"
+          },
+          {
+            "filename": "debs/stable/arm/l/libicu/libicu_78.3_arm.deb",
+            "name": "libicu",
+            "sha256": "812a92514d4b9426bc407724a96809060023fc5c565ee3e71aba557a317b7dd4",
+            "version": "78.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libxml2/libxml2_2.15.3_arm.deb",
+            "name": "libxml2",
+            "sha256": "e54a6d761502618ee21791be9cba6075a7e30a0811626db02ef56ccf5c8f7910",
+            "version": "2.15.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libbluray/libbluray_1.4.1_arm.deb",
+            "name": "libbluray",
+            "sha256": "6722529d4668f6367ce4da6e2ccb74ce86f2063fd7e96a605a3afd0e3bfdbf2e",
+            "version": "1.4.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libogg/libogg_1.3.6-1_arm.deb",
+            "name": "libogg",
+            "sha256": "1cafc0bd7e6c3a3c5b738314934879e76e369c84d817dfd37a35f64d96d9bc79",
+            "version": "1.3.6-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libflac/libflac_1.5.0-1_arm.deb",
+            "name": "libflac",
+            "sha256": "5370f9ec825929ba86f0784c49f5ff2f6c14adc3ec5e858d0459e65b6463362c",
+            "version": "1.5.0-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libmp3lame/libmp3lame_3.100-7_arm.deb",
+            "name": "libmp3lame",
+            "sha256": "92993dd9669f6c026425bedf9d3c00ddf95d32497598495a63ae7bc61d329fd0",
+            "version": "3.100-7"
+          },
+          {
+            "filename": "debs/stable/arm/l/libopus/libopus_1.6.1_arm.deb",
+            "name": "libopus",
+            "sha256": "6558000027cd057e7a280a9b4df407cbe3841f93417a21bcca5a35620e5a8c84",
+            "version": "1.6.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libvorbis/libvorbis_1.3.7-4_arm.deb",
+            "name": "libvorbis",
+            "sha256": "0e0b3397b835304eae5f85341bef2d761d2391151a5bf2e8e8bc00c906432376",
+            "version": "1.3.7-4"
+          },
+          {
+            "filename": "debs/stable/arm/l/libsndfile/libsndfile_1.2.2-2_arm.deb",
+            "name": "libsndfile",
+            "sha256": "414400a6024788613beadb54a7aff28cfc11d6da05119332e89e6cd173e3668f",
+            "version": "1.2.2-2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libbs2b/libbs2b_3.1.0-2_arm.deb",
+            "name": "libbs2b",
+            "sha256": "37e2e63febe4f084edc1e74f08d7ec1925d3295c341eb713a28269b7839d07d8",
+            "version": "3.1.0-2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libdav1d/libdav1d_1.5.3_arm.deb",
+            "name": "libdav1d",
+            "sha256": "87b5214b6dc84d17ef63be79b2d031b8089ee87e554f056a384981bdcb568d41",
+            "version": "1.5.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libmysofa/libmysofa_1.3.4-1_arm.deb",
+            "name": "libmysofa",
+            "sha256": "de7a0ce8db7a0ba90ca47414c2a296a9f6fb7dc5ff79b362b1e67f6b28951ea3",
+            "version": "1.3.4-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libopencore-amr/libopencore-amr_0.1.6-1_arm.deb",
+            "name": "libopencore-amr",
+            "sha256": "9a604fdeccada0bcdd88993de23d12e21d6fa4f6d641f840b64ee57f796f65bc",
+            "version": "0.1.6-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libmpg123/libmpg123_1.33.3_arm.deb",
+            "name": "libmpg123",
+            "sha256": "5f3c5d66cc1272f1988f8e79368f15203c7b6b8276560d2ff82f7b7ff7c82ef3",
+            "version": "1.33.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libopenmpt/libopenmpt_0.8.7_arm.deb",
+            "name": "libopenmpt",
+            "sha256": "1a05b37a6a67a1f1f99e7e20dc91b2c2b59c61172b18821dc34f43446d652ea6",
+            "version": "0.8.7"
+          },
+          {
+            "filename": "debs/stable/arm/l/littlecms/littlecms_2.19.1_arm.deb",
+            "name": "littlecms",
+            "sha256": "e064b08800dd2ec40b3dc87ab76ecd5a377a8589132e2b3d891db2fcaf38a6ae",
+            "version": "2.19.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libdrm/libdrm_2.4.134_arm.deb",
+            "name": "libdrm",
+            "sha256": "4e256cc31eedbc4957aae7a4086481f60818160ffa57f3a5d5cbc9e0b0ccacf2",
+            "version": "2.4.134"
+          },
+          {
+            "filename": "debs/stable/arm/l/libxshmfence/libxshmfence_1.3.3-1_arm.deb",
+            "name": "libxshmfence",
+            "sha256": "f85fff46fd5c2998d0899eaa3c5cfa72b32fa9bd00b0e532414b948272003f1e",
+            "version": "1.3.3-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libwayland/libwayland_1.25.0_arm.deb",
+            "name": "libwayland",
+            "sha256": "63bbecaa76fed311ee09ec31efd4f0daff41da067a270c02356af74ae5e1ec9f",
+            "version": "1.25.0"
+          },
+          {
+            "filename": "debs/stable/arm/v/vulkan-loader-generic/vulkan-loader-generic_1.4.354_arm.deb",
+            "name": "vulkan-loader-generic",
+            "sha256": "b51c0b1410fe14c4d5ba0eec0608af60f4d3738721730ad56182033df8edfee7",
+            "version": "1.4.354"
+          },
+          {
+            "filename": "debs/stable/arm/z/zstd/zstd_1.5.7-1_arm.deb",
+            "name": "zstd",
+            "sha256": "b384d9e7dfb8093b15addaf028b2608b1445b4eaa1efcc2188b73a19f1815f0e",
+            "version": "1.5.7-1"
+          },
+          {
+            "filename": "debs/stable/arm/m/mesa-vulkan-icd-swrast/mesa-vulkan-icd-swrast_26.0.6-1_arm.deb",
+            "name": "mesa-vulkan-icd-swrast",
+            "sha256": "aa3fd6927313d70b3aee689bc86bf893547e483b7b235a08218003f7c93866d9",
+            "version": "26.0.6-1"
+          },
+          {
+            "filename": "debs/stable/all/v/vulkan-icd/vulkan-icd_0.1_all.deb",
+            "name": "vulkan-icd",
+            "sha256": "5f07beec0c57add366c64d71731a0630c596573a418dbcb605ede5e63df49563",
+            "version": "0.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libplacebo/libplacebo_7.360.1_arm.deb",
+            "name": "libplacebo",
+            "sha256": "77b13165bfe7d065e54890a9e7897572a3dda48db9e9892e76477a6cd564e821",
+            "version": "7.360.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/librav1e/librav1e_0.8.1_arm.deb",
+            "name": "librav1e",
+            "sha256": "79c1802a3c54b35254b9d04af3ad8c19a9bd52d315b4222e72948b779ddc7f4f",
+            "version": "0.8.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libsoxr/libsoxr_0.1.3-8_arm.deb",
+            "name": "libsoxr",
+            "sha256": "e634e6071fcaa49293f1ff633b507bcd156b41f4cbf49b66254c9b1460b692ca",
+            "version": "0.1.3-8"
+          },
+          {
+            "filename": "debs/stable/arm/l/libsrt/libsrt_1.5.5_arm.deb",
+            "name": "libsrt",
+            "sha256": "936e692d5a582288c51bea9bcfe0aed5d0a111fc2bd6f0b53ba74b711c558b6f",
+            "version": "1.5.5"
+          },
+          {
+            "filename": "debs/stable/arm/l/libssh/libssh_0.12.0-1_arm.deb",
+            "name": "libssh",
+            "sha256": "54d12d5dfd882df7bb6e42585fbae463f2295cdafe773515fac97ef2889342dc",
+            "version": "0.12.0-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libtheora/libtheora_1.2.0-1_arm.deb",
+            "name": "libtheora",
+            "sha256": "1139bfabfb3c767674a24bf80e209666b35b60b17b17635850a23fb54228de30",
+            "version": "1.2.0-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libjpeg-turbo/libjpeg-turbo_3.1.4.1_arm.deb",
+            "name": "libjpeg-turbo",
+            "sha256": "ab814ad5795507b08b048820688ba3fd3a9b5b38d0b5b7317fc7d0d7a450d218",
+            "version": "3.1.4.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libv4l/libv4l_1.24.1-2_arm.deb",
+            "name": "libv4l",
+            "sha256": "66ffe87550c4c65c52013c01aeb705b1974140f446d8378541f098e848e50a86",
+            "version": "1.24.1-2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libvidstab/libvidstab_1.1.1-3_arm.deb",
+            "name": "libvidstab",
+            "sha256": "ef4bb3d81ac537bd1b1d40d677fec51dcefed69e8200ec1259cf15ac8cfacdff",
+            "version": "1.1.1-3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libvmaf/libvmaf_3.2.0_arm.deb",
+            "name": "libvmaf",
+            "sha256": "74444d09e69dbd0657fe8f8db070afec8ba88038894ac422ae1bac48945e1ee4",
+            "version": "3.2.0"
+          },
+          {
+            "filename": "debs/stable/arm/l/libvo-amrwbenc/libvo-amrwbenc_0.1.3-2_arm.deb",
+            "name": "libvo-amrwbenc",
+            "sha256": "f53556d119ce916c08815c20557c3a1b7de379e196e313e50cd75b8f2b86ca1c",
+            "version": "0.1.3-2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libvpx/libvpx_1:1.16.0_arm.deb",
+            "name": "libvpx",
+            "sha256": "b2fbe95a175dfcac618c62d985e1542338bea8c34c7a85bcba97e74ac73b0693",
+            "version": "1:1.16.0"
+          },
+          {
+            "filename": "debs/stable/arm/g/giflib/giflib_5.2.2-2_arm.deb",
+            "name": "giflib",
+            "sha256": "cd1f74496c5431be7ab189f1bdfadd400fb77916ea0c649e8d53044e667e9abb",
+            "version": "5.2.2-2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libtiff/libtiff_4.7.1_arm.deb",
+            "name": "libtiff",
+            "sha256": "2bf67c8445d3a7ee748275b968ee9e4500b39a3cbf7f930fdf79bdbc0b843002",
+            "version": "4.7.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libwebp/libwebp_1.6.0-1_arm.deb",
+            "name": "libwebp",
+            "sha256": "ab810d1f3d23eda96d77f568d1f7c052d73c936ddd0b80f2557cee0b7c2cce46",
+            "version": "1.6.0-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libx264/libx264_1:0.164.3191-1_arm.deb",
+            "name": "libx264",
+            "sha256": "b7c4900d7624a2f8c814a637f38ee528938eb47c8624922507f76d661e384343",
+            "version": "1:0.164.3191-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libx265/libx265_4.2_arm.deb",
+            "name": "libx265",
+            "sha256": "d2db18501d7bcdaebba2356d4f78912fdd0b88178992a57e6737e7cd9ad5b923",
+            "version": "4.2"
+          },
+          {
+            "filename": "debs/stable/arm/l/libzimg/libzimg_3.0.6_arm.deb",
+            "name": "libzimg",
+            "sha256": "5e06b40c745a9e445da65ae00220b409ac75611dd25b3e877cb895e53584ad51",
+            "version": "3.0.6"
+          },
+          {
+            "filename": "debs/stable/arm/l/libsodium/libsodium_1.0.22-1_arm.deb",
+            "name": "libsodium",
+            "sha256": "7ab7fec416919c0ba5b72f8fc094462af712e72a5981562cd976cf22990e207e",
+            "version": "1.0.22-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libzmq/libzmq_4.3.5-2_arm.deb",
+            "name": "libzmq",
+            "sha256": "c6cdde67fd58ac80073fdfd5734548546ffbad98f504f9c9c8120ee4572d45c7",
+            "version": "4.3.5-2"
+          },
+          {
+            "filename": "debs/stable/arm/o/ocl-icd/ocl-icd_2.3.5_arm.deb",
+            "name": "ocl-icd",
+            "sha256": "e22031429dbeccc71747183b57f93eec56d2d74dd020ecd39161767ca923ded7",
+            "version": "2.3.5"
+          },
+          {
+            "filename": "debs/stable/arm/f/fftw/fftw_3.3.11_arm.deb",
+            "name": "fftw",
+            "sha256": "42e1091af9aab0eadbd670bbdc4c2774ecc3b80c3ad5a7c8dd60ce1100ecca0f",
+            "version": "3.3.11"
+          },
+          {
+            "filename": "debs/stable/arm/l/libsamplerate/libsamplerate_0.2.2-4_arm.deb",
+            "name": "libsamplerate",
+            "sha256": "dbc298560179a9a3f6e103038ed4cb7dcc6ef8cf03c8c9c13a9b13bf3b1fda58",
+            "version": "0.2.2-4"
+          },
+          {
+            "filename": "debs/stable/arm/r/rubberband/rubberband_4.0.0-1_arm.deb",
+            "name": "rubberband",
+            "sha256": "5a31e392ad970045e0d6c91eb2763ecfd11c07bd761a2f290f6c11ade37914c4",
+            "version": "4.0.0-1"
+          },
+          {
+            "filename": "debs/stable/arm/s/svt-av1/svt-av1_4.1.0_arm.deb",
+            "name": "svt-av1",
+            "sha256": "cc0bd9be2e82faf0d4e47340110cbb3cb03827f36ed2e7fe3eec9f4c2c2ab28a",
+            "version": "4.1.0"
+          },
+          {
+            "filename": "debs/stable/arm/x/xvidcore/xvidcore_1.3.7-1_arm.deb",
+            "name": "xvidcore",
+            "sha256": "1c400a4af73d4d3ca8a83d4f78177f065d2f407a35765ba1f9632bffc22e254c",
+            "version": "1.3.7-1"
+          },
+          {
+            "filename": "debs/stable/arm/f/ffmpeg/ffmpeg_8.1.2_arm.deb",
+            "name": "ffmpeg",
+            "sha256": "d3d364f5f563b5cbf120b5f952ebe2c7aaed92e81103607ee141a283afd23d02",
+            "version": "8.1.2"
+          }
+        ],
+        "python": [
+          {
+            "filename": "debs/stable/arm/n/ncurses/ncurses_6.6.20260307+really6.5.20250830_arm.deb",
+            "name": "ncurses",
+            "sha256": "3dd5183412ea9caf2baf49daf27cb75c5a82e844bd0f97016eb9b447c4e83683",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/arm/r/readline/readline_8.3.3_arm.deb",
+            "name": "readline",
+            "sha256": "871298eb22b0edab1df7137eb516db20aae777e9e4f60c62958236885d89cc99",
+            "version": "8.3.3"
+          },
+          {
+            "filename": "debs/stable/arm/g/gdbm/gdbm_1.26-1_arm.deb",
+            "name": "gdbm",
+            "sha256": "472a0fce596dc5cc2df13ac07ce77e3e7eb35f19c4c3dc751fae2b24e9b45290",
+            "version": "1.26-1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libandroid-posix-semaphore/libandroid-posix-semaphore_0.1-4_arm.deb",
+            "name": "libandroid-posix-semaphore",
+            "sha256": "2221de523551da8734b887c908c5c947e97c2409ddc8b58af91426503e13db05",
+            "version": "0.1-4"
+          },
+          {
+            "filename": "debs/stable/arm/l/libbz2/libbz2_1.0.8-8_arm.deb",
+            "name": "libbz2",
+            "sha256": "a076dbb5a8ce18ccc0b1d09febcd584fb27c7774321c6ce14179e19e5b331ca8",
+            "version": "1.0.8-8"
+          },
+          {
+            "filename": "debs/stable/all/c/ca-certificates/ca-certificates_1:2026.05.14_all.deb",
+            "name": "ca-certificates",
+            "sha256": "0ff9b6c93df094e4b2fd95ae269a32383aaf89fa6117a11853124b50abd027cc",
+            "version": "1:2026.05.14"
+          },
+          {
+            "filename": "debs/stable/arm/z/zlib/zlib_1.3.2_arm.deb",
+            "name": "zlib",
+            "sha256": "91068985ec585baf8ab0e6a19dd9a9f34693a17b79d9f94f7f646c1246c0c10c",
+            "version": "1.3.2"
+          },
+          {
+            "filename": "debs/stable/arm/o/openssl/openssl_1:3.6.3_arm.deb",
+            "name": "openssl",
+            "sha256": "f33e0348e57eb5b0ba835a771624849ff848c514f1065856c69a31cf7c97f813",
+            "version": "1:3.6.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libcrypt/libcrypt_0.2-6_arm.deb",
+            "name": "libcrypt",
+            "sha256": "98918d68ed481fd8499cb05a26ceb14ee2f92d3038d850a6638a8fec2cba3ed1",
+            "version": "0.2-6"
+          },
+          {
+            "filename": "debs/stable/arm/l/libexpat/libexpat_2.8.1_arm.deb",
+            "name": "libexpat",
+            "sha256": "fbde86ac0e3d117107d1e747f276f402b492ffdf05a507cfd49f9684b8d545e6",
+            "version": "2.8.1"
+          },
+          {
+            "filename": "debs/stable/arm/l/libffi/libffi_3.5.2_arm.deb",
+            "name": "libffi",
+            "sha256": "6c52517113e78ad072b4189a486dd384f19577b6de48d771a36715d0cc6f1975",
+            "version": "3.5.2"
+          },
+          {
+            "filename": "debs/stable/arm/l/liblzma/liblzma_5.8.3_arm.deb",
+            "name": "liblzma",
+            "sha256": "ab263fbbdf0269cf088788f54d7d4fdf8477e137c5808f25e7053c1cd2cb9eb7",
+            "version": "5.8.3"
+          },
+          {
+            "filename": "debs/stable/arm/l/libsqlite/libsqlite_3.53.2_arm.deb",
+            "name": "libsqlite",
+            "sha256": "084cd943e5c89c0a9e744772564ee5b35fd3e673159a69d4e8a57c4a4465eba6",
+            "version": "3.53.2"
+          },
+          {
+            "filename": "debs/stable/arm/n/ncurses-ui-libs/ncurses-ui-libs_6.6.20260307+really6.5.20250830_arm.deb",
+            "name": "ncurses-ui-libs",
+            "sha256": "6d1ff4b1c130e53f5bf09ee5946df8eba76c6b9e9172f782efd005ef2f96b229",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/arm/p/python/python_3.13.13-1_arm.deb",
+            "name": "python",
+            "sha256": "335ef52c947e1491154171c95fbf4bca9bdbdcd93c13352e38952a8e26b80e27",
+            "version": "3.13.13-1"
+          },
+          {
+            "filename": "debs/stable/all/p/python-pip/python-pip_26.1.2_all.deb",
+            "name": "python-pip",
+            "sha256": "5f34382fa79a4e46585b3cdfbc6138439ca9298242eaca1025dd2ddaaa1083c8",
+            "version": "26.1.2"
+          },
+          {
+            "filename": "debs/stable/arm/p/python-pycryptodomex/python-pycryptodomex_3.23.0-3_arm.deb",
+            "name": "python-pycryptodomex",
+            "sha256": "f07d08b2e885fd9bd31129dd789f7b961970c5c9c247a26779f61a3fcbd61cbb",
+            "version": "3.23.0-3"
+          }
+        ]
+      },
+      "packageIndexSha256": "c1bfee2a47b2e0dd87308c46ad323d34bd806227a904e08b97107c9c5e9d7e93",
+      "termuxArchitecture": "arm"
+    },
+    "x86_64": {
+      "groups": {
+        "aria2c": [
+          {
+            "filename": "debs/stable/x86_64/l/libc++/libc++_29_x86_64.deb",
+            "name": "libc++",
+            "sha256": "5a00dcd17d414f96913f95939565cafe3b35d2cc8db409cc3ae819d9d9b38010",
+            "version": "29"
+          },
+          {
+            "filename": "debs/stable/x86_64/r/resolv-conf/resolv-conf_1.3_x86_64.deb",
+            "name": "resolv-conf",
+            "sha256": "8aa3d244569d65495b46bf46573637e0666ed4d5a61ba82f9902fe3d6ab662fe",
+            "version": "1.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/c/c-ares/c-ares_1.34.6_x86_64.deb",
+            "name": "c-ares",
+            "sha256": "3aedf093de1207c7dbde163cf45698dae574ef2f78443e3642bdb9a765a6665e",
+            "version": "1.34.6"
+          },
+          {
+            "filename": "debs/stable/all/c/ca-certificates/ca-certificates_1:2026.05.14_all.deb",
+            "name": "ca-certificates",
+            "sha256": "0ff9b6c93df094e4b2fd95ae269a32383aaf89fa6117a11853124b50abd027cc",
+            "version": "1:2026.05.14"
+          },
+          {
+            "filename": "debs/stable/x86_64/z/zlib/zlib_1.3.2_x86_64.deb",
+            "name": "zlib",
+            "sha256": "61f95c0da4c0aa55cbf6547de7a3aab35a0e28ced7a51d2958e5807915420ad9",
+            "version": "1.3.2"
+          },
+          {
+            "filename": "debs/stable/x86_64/o/openssl/openssl_1:3.6.3_x86_64.deb",
+            "name": "openssl",
+            "sha256": "e9b5132edc694e1a3e05ae7b1fc77ad66f2c3eaa20f5084a8fea11cd3389cedb",
+            "version": "1:3.6.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libandroid-glob/libandroid-glob_0.7-1_x86_64.deb",
+            "name": "libandroid-glob",
+            "sha256": "79e3676f8bb4e70976384185b89bbfd555d91cece1f32f79475e936fd481b92a",
+            "version": "0.7-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libiconv/libiconv_1.18-1_x86_64.deb",
+            "name": "libiconv",
+            "sha256": "02b176505393c4fd70e5ee2dc29da7882434e89ddbb776fec326e0628347e16a",
+            "version": "1.18-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libicu/libicu_78.3_x86_64.deb",
+            "name": "libicu",
+            "sha256": "820f4569ee11f3fd62729b320f5e444f7d8ea8ad3441041a3c3a681744cf0e17",
+            "version": "78.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libxml2/libxml2_2.15.3_x86_64.deb",
+            "name": "libxml2",
+            "sha256": "556381682f8e4dde57f0e8a0bafdeb09f55e8c52c47ea415a692cc364084c1f9",
+            "version": "2.15.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/a/aria2/aria2_1.37.0-3_x86_64.deb",
+            "name": "aria2",
+            "sha256": "9cecd4490213e95dc9e4758827d15e7578fe2b1715762199c28f9fb506c10672",
+            "version": "1.37.0-3"
+          }
+        ],
+        "ffmpeg": [
+          {
+            "filename": "debs/stable/x86_64/b/brotli/brotli_1.2.0_x86_64.deb",
+            "name": "brotli",
+            "sha256": "fa82bd4a820fe72940fc3cf7ce1b732e599cc107747bdfed2b6b2c076fe69a4a",
+            "version": "1.2.0"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libbz2/libbz2_1.0.8-8_x86_64.deb",
+            "name": "libbz2",
+            "sha256": "92f2dabeb1a29de62f31fc813a3bf6ebf9fed681cb5fde4ae4c6c101c9412b87",
+            "version": "1.0.8-8"
+          },
+          {
+            "filename": "debs/stable/x86_64/z/zlib/zlib_1.3.2_x86_64.deb",
+            "name": "zlib",
+            "sha256": "61f95c0da4c0aa55cbf6547de7a3aab35a0e28ced7a51d2958e5807915420ad9",
+            "version": "1.3.2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libpng/libpng_1.6.58_x86_64.deb",
+            "name": "libpng",
+            "sha256": "0121e12defa99a06b36fd9d99c8f3de659cc25e3966eb3e0f9b0e752ba72e79e",
+            "version": "1.6.58"
+          },
+          {
+            "filename": "debs/stable/x86_64/f/freetype/freetype_2.14.3_x86_64.deb",
+            "name": "freetype",
+            "sha256": "d6b83dc97d613decf80d550f6bc8e5fae0846baae8e5708d37c09db3674bf418",
+            "version": "2.14.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libexpat/libexpat_2.8.1_x86_64.deb",
+            "name": "libexpat",
+            "sha256": "19c87015a01020b85b8b4a80d85573b52e490c4ec6ddb92a4dedd006a3f2014e",
+            "version": "2.8.1"
+          },
+          {
+            "filename": "debs/stable/all/t/ttf-dejavu/ttf-dejavu_2.37-8_all.deb",
+            "name": "ttf-dejavu",
+            "sha256": "351033f14be574a336e428d2e0082737f3de30e2ea9f4874d22e8bf69916e757",
+            "version": "2.37-8"
+          },
+          {
+            "filename": "debs/stable/x86_64/f/fontconfig/fontconfig_2.18.1_x86_64.deb",
+            "name": "fontconfig",
+            "sha256": "d79334c728e062347b65a2ec04778e21c6a65320a84f94dc20dba6283a5fe0e9",
+            "version": "2.18.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libandroid-support/libandroid-support_28_x86_64.deb",
+            "name": "libandroid-support",
+            "sha256": "5904eee214770e5a5b5a50cf83f8d6cf8ae4d6ca4a2bed8d9e3f768a0b113a88",
+            "version": "28"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libffi/libffi_3.5.2_x86_64.deb",
+            "name": "libffi",
+            "sha256": "4310fa16bf1a9a846166cdd11cdb090665193816155bec9debb0ea79aea07527",
+            "version": "3.5.2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libiconv/libiconv_1.18-1_x86_64.deb",
+            "name": "libiconv",
+            "sha256": "02b176505393c4fd70e5ee2dc29da7882434e89ddbb776fec326e0628347e16a",
+            "version": "1.18-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/p/pcre2/pcre2_10.47_x86_64.deb",
+            "name": "pcre2",
+            "sha256": "bf908fb0e5a4653143f8cee1cc5b237b1b7ff9daba59bb0cec5a771be03f5518",
+            "version": "10.47"
+          },
+          {
+            "filename": "debs/stable/x86_64/r/resolv-conf/resolv-conf_1.3_x86_64.deb",
+            "name": "resolv-conf",
+            "sha256": "8aa3d244569d65495b46bf46573637e0666ed4d5a61ba82f9902fe3d6ab662fe",
+            "version": "1.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/n/ncurses/ncurses_6.6.20260307+really6.5.20250830_x86_64.deb",
+            "name": "ncurses",
+            "sha256": "1924d3fbef558aab389272e37505c0885037bc5912a76ab6a715fa628589c823",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/x86_64/r/readline/readline_8.3.3_x86_64.deb",
+            "name": "readline",
+            "sha256": "6fca2faaaf28ea5d6ce3ef0ab678918ac1fb058753ef85c5c33c0184db15c514",
+            "version": "8.3.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/g/gdbm/gdbm_1.26-1_x86_64.deb",
+            "name": "gdbm",
+            "sha256": "9fd341622b4bdd41779bf9279320582497a3ce8cd929f8ce13bf005fa6dc3192",
+            "version": "1.26-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libandroid-posix-semaphore/libandroid-posix-semaphore_0.1-4_x86_64.deb",
+            "name": "libandroid-posix-semaphore",
+            "sha256": "0d465ceaa301e324971baa3c79bc76f7f6459286eaaac88892799b9547ba1bab",
+            "version": "0.1-4"
+          },
+          {
+            "filename": "debs/stable/all/c/ca-certificates/ca-certificates_1:2026.05.14_all.deb",
+            "name": "ca-certificates",
+            "sha256": "0ff9b6c93df094e4b2fd95ae269a32383aaf89fa6117a11853124b50abd027cc",
+            "version": "1:2026.05.14"
+          },
+          {
+            "filename": "debs/stable/x86_64/o/openssl/openssl_1:3.6.3_x86_64.deb",
+            "name": "openssl",
+            "sha256": "e9b5132edc694e1a3e05ae7b1fc77ad66f2c3eaa20f5084a8fea11cd3389cedb",
+            "version": "1:3.6.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libcrypt/libcrypt_0.2-6_x86_64.deb",
+            "name": "libcrypt",
+            "sha256": "5ecab772d908707554cffcffce894798e7a274920d56a7c6fbaa54b41f4dfc47",
+            "version": "0.2-6"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/liblzma/liblzma_5.8.3_x86_64.deb",
+            "name": "liblzma",
+            "sha256": "699a6cc8f3efde2fa67702f4b56d2b5e097588929b6cd915e11c174b92981ffd",
+            "version": "5.8.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libsqlite/libsqlite_3.53.2_x86_64.deb",
+            "name": "libsqlite",
+            "sha256": "3a15c52592bc7919a4e176ca91104debcb66cbc992ffd0142e0632b818b18d48",
+            "version": "3.53.2"
+          },
+          {
+            "filename": "debs/stable/x86_64/n/ncurses-ui-libs/ncurses-ui-libs_6.6.20260307+really6.5.20250830_x86_64.deb",
+            "name": "ncurses-ui-libs",
+            "sha256": "8995a48866b53686ac33aab7dbfaa52336ea2a485a2d4f9fce83d98f352fe67c",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/x86_64/p/python/python_3.13.13-1_x86_64.deb",
+            "name": "python",
+            "sha256": "2f94b31464ee145f5157a91cc129579c014219159570f125e0fd1bbbcb651230",
+            "version": "3.13.13-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/g/glib/glib_2.88.1_x86_64.deb",
+            "name": "glib",
+            "sha256": "ebf84d015bc7991195de5c6bd070de0a0fe175226ba01345cb8a1fc5ec30c432",
+            "version": "2.88.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/f/fribidi/fribidi_1.0.16-1_x86_64.deb",
+            "name": "fribidi",
+            "sha256": "7df6b6134971438952cd26766377b646ae178d4d35490e2584ebcf18f34dc27f",
+            "version": "1.0.16-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libc++/libc++_29_x86_64.deb",
+            "name": "libc++",
+            "sha256": "5a00dcd17d414f96913f95939565cafe3b35d2cc8db409cc3ae819d9d9b38010",
+            "version": "29"
+          },
+          {
+            "filename": "debs/stable/x86_64/g/game-music-emu/game-music-emu_0.6.5_x86_64.deb",
+            "name": "game-music-emu",
+            "sha256": "ed85ab498502599c05fa378421a717d2ff185ed1c34c64ace1dde8d0a3c6b791",
+            "version": "0.6.5"
+          },
+          {
+            "filename": "debs/stable/x86_64/g/glslang/glslang_16.3.0_x86_64.deb",
+            "name": "glslang",
+            "sha256": "d80f13c6e2ddab15aa142771cb06994b84ca9ae5eb2dd9af444381619b698d3d",
+            "version": "16.3.0"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libandroid-shmem/libandroid-shmem_0.7_x86_64.deb",
+            "name": "libandroid-shmem",
+            "sha256": "230ada30475fd65b9b8a3262bcea9a5280e38bdfe2e18a93c8f1f2e9ea0e32a6",
+            "version": "0.7"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libandroid-execinfo/libandroid-execinfo_0.1-3_x86_64.deb",
+            "name": "libandroid-execinfo",
+            "sha256": "b044c6a7661d9029b7ff4abf4a43da0f42cb12de4234d519da50fd704c6216b7",
+            "version": "0.1-3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/liblzo/liblzo_2.10-5_x86_64.deb",
+            "name": "liblzo",
+            "sha256": "41f796a5e563aadf312eb37d1ee2de781dafec063ed16e38ab0b1c6b3dfc9989",
+            "version": "2.10-5"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libpixman/libpixman_0.46.4-1_x86_64.deb",
+            "name": "libpixman",
+            "sha256": "3efa16fc5c73644737ec88cc423bf667fa6d31dedc67171e3b937beaefff5b7e",
+            "version": "0.46.4-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libxau/libxau_1.0.12-2_x86_64.deb",
+            "name": "libxau",
+            "sha256": "2e73df19f111b46cc5886320e80d150b5d58defa3236e581ab5585533088faab",
+            "version": "1.0.12-2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libxdmcp/libxdmcp_1.1.5-2_x86_64.deb",
+            "name": "libxdmcp",
+            "sha256": "72f1cc4b923e962b0393531441715b22fc58b87b2aad903bcc0b7b2be498b4db",
+            "version": "1.1.5-2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libxcb/libxcb_1.17.0-1_x86_64.deb",
+            "name": "libxcb",
+            "sha256": "01e5b7b09ec23a9bab17c888eb1d3939e35d4911d2fd7f8525067f4eeefeee1d",
+            "version": "1.17.0-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libx11/libx11_1.8.13_x86_64.deb",
+            "name": "libx11",
+            "sha256": "b012150cbaa543b3137a4c594344fb70fa2ef14ccc04279cdf81868cd6e697c0",
+            "version": "1.8.13"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libxext/libxext_1.3.7_x86_64.deb",
+            "name": "libxext",
+            "sha256": "90a1cfb4a9cbb602ded7777bedbd52295a873e708ff6b597acc086671779f52b",
+            "version": "1.3.7"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libxrender/libxrender_0.9.12-1_x86_64.deb",
+            "name": "libxrender",
+            "sha256": "7722b655fa43c64cb3bb4c55e75dcbbb2bd136fd42db7ee4100b38a4bb8ba084",
+            "version": "0.9.12-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libcairo/libcairo_1.18.4-2_x86_64.deb",
+            "name": "libcairo",
+            "sha256": "22f1a03b0d7fcebf0f71c3571b119bc3c442892306eb876020ba996c0e1de062",
+            "version": "1.18.4-2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libgraphite/libgraphite_1.3.15_x86_64.deb",
+            "name": "libgraphite",
+            "sha256": "f034731d429fc21a504862f4464125eb7a465f23ba5ef49a4e1390aeadf7f83a",
+            "version": "1.3.15"
+          },
+          {
+            "filename": "debs/stable/x86_64/h/harfbuzz/harfbuzz_14.2.1_x86_64.deb",
+            "name": "harfbuzz",
+            "sha256": "6a7cdc4ee92745be30f8b14eef147c69e66d11a213e644313c56cc3573b79593",
+            "version": "14.2.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libaom/libaom_3.14.1_x86_64.deb",
+            "name": "libaom",
+            "sha256": "515f1581c0e6bfe3345ef7a2f67e2efcfebcf616c4b42ef8dbb92dd30db96c30",
+            "version": "3.14.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libandroid-glob/libandroid-glob_0.7-1_x86_64.deb",
+            "name": "libandroid-glob",
+            "sha256": "79e3676f8bb4e70976384185b89bbfd555d91cece1f32f79475e936fd481b92a",
+            "version": "0.7-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libandroid-stub/libandroid-stub_29-1_x86_64.deb",
+            "name": "libandroid-stub",
+            "sha256": "b02ba40d70fcca3593386c5ed408f46b41e1cc7a79baef03924d941871ca55f6",
+            "version": "29-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libass/libass_0.17.5_x86_64.deb",
+            "name": "libass",
+            "sha256": "79309e3bf3420ca5cd62414e43761f2734264277ff212664ad696b3e39718fd7",
+            "version": "0.17.5"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libudfread/libudfread_1.2.0_x86_64.deb",
+            "name": "libudfread",
+            "sha256": "8bf496b24fb50d8cc87f915e6d919721e2751a55b2c7c008d6548813c4b6f8dc",
+            "version": "1.2.0"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libicu/libicu_78.3_x86_64.deb",
+            "name": "libicu",
+            "sha256": "820f4569ee11f3fd62729b320f5e444f7d8ea8ad3441041a3c3a681744cf0e17",
+            "version": "78.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libxml2/libxml2_2.15.3_x86_64.deb",
+            "name": "libxml2",
+            "sha256": "556381682f8e4dde57f0e8a0bafdeb09f55e8c52c47ea415a692cc364084c1f9",
+            "version": "2.15.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libbluray/libbluray_1.4.1_x86_64.deb",
+            "name": "libbluray",
+            "sha256": "43187d313930fde5accbf7ff929d7e4421cbe834b489451959a52588f7223a55",
+            "version": "1.4.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libogg/libogg_1.3.6-1_x86_64.deb",
+            "name": "libogg",
+            "sha256": "4f185ed99f7e402e3ca9bf65af7efac6a97645b042cbacd3cb64eed3b17d2ac7",
+            "version": "1.3.6-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libflac/libflac_1.5.0-1_x86_64.deb",
+            "name": "libflac",
+            "sha256": "829dbdbb9dde6ec3b6f524d6891b0aa94425483f47f969bae726e4307d1ca63e",
+            "version": "1.5.0-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libmp3lame/libmp3lame_3.100-7_x86_64.deb",
+            "name": "libmp3lame",
+            "sha256": "1fd3717a1a0ee1c48c33fffd5001ad285fc9f040562a77a3594abbfb822c3a0d",
+            "version": "3.100-7"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libopus/libopus_1.6.1_x86_64.deb",
+            "name": "libopus",
+            "sha256": "ee02df8bac371a0cae88755722cc375ab71305412cddd89eaf473f9e97ad8d97",
+            "version": "1.6.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libvorbis/libvorbis_1.3.7-4_x86_64.deb",
+            "name": "libvorbis",
+            "sha256": "9a36d43d7e543f2d6e04f400902ec34a6429eff18582d42564433c67fc87a52a",
+            "version": "1.3.7-4"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libsndfile/libsndfile_1.2.2-2_x86_64.deb",
+            "name": "libsndfile",
+            "sha256": "5b5dbf6e1cea5caf922a77c9501a964c35390795a323dcdcbf334800a4f24efd",
+            "version": "1.2.2-2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libbs2b/libbs2b_3.1.0-2_x86_64.deb",
+            "name": "libbs2b",
+            "sha256": "a4af2859ac0e55c2a9927bf4f12bece3a867c039889c26ee3b55e1c3a299a5be",
+            "version": "3.1.0-2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libdav1d/libdav1d_1.5.3_x86_64.deb",
+            "name": "libdav1d",
+            "sha256": "8285e82d44d805ff29c3cad6961540d80ccc55729abb3a44d09bb9b6191ec8fd",
+            "version": "1.5.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libmysofa/libmysofa_1.3.4-1_x86_64.deb",
+            "name": "libmysofa",
+            "sha256": "caf99026c4d9fc47ce530d876424c686f177a8fff2bedb1443ef04318f687f0f",
+            "version": "1.3.4-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libopencore-amr/libopencore-amr_0.1.6-1_x86_64.deb",
+            "name": "libopencore-amr",
+            "sha256": "516e5e76db366587864f6b601d93f87d800773e924cf2a1d1f3fed1880326781",
+            "version": "0.1.6-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libmpg123/libmpg123_1.33.3_x86_64.deb",
+            "name": "libmpg123",
+            "sha256": "56d4f5f65e17e8d84a53b8635b2843d12644468dc8f25bcc48994b1ea5db6d0d",
+            "version": "1.33.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libopenmpt/libopenmpt_0.8.7_x86_64.deb",
+            "name": "libopenmpt",
+            "sha256": "2e80527ff01ed797170215136258106f53d635ccc8a17bab01d225ae1eefe44c",
+            "version": "0.8.7"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/littlecms/littlecms_2.19.1_x86_64.deb",
+            "name": "littlecms",
+            "sha256": "2a339eec1b491ad253ea41a282c2b299e696a4ce29ce6f31ada341ce3e572a20",
+            "version": "2.19.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libdrm/libdrm_2.4.134_x86_64.deb",
+            "name": "libdrm",
+            "sha256": "5cfaab5e8bd361458b4636489cf588ba87fc2cd5151feee139de61a2e364bb77",
+            "version": "2.4.134"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libxshmfence/libxshmfence_1.3.3-1_x86_64.deb",
+            "name": "libxshmfence",
+            "sha256": "33b8cb864838f746cb3c740472954d92f5e22e29ba42ffd5440d0c88b4fb8fdd",
+            "version": "1.3.3-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libwayland/libwayland_1.25.0_x86_64.deb",
+            "name": "libwayland",
+            "sha256": "418dda571d82787d8c4a49732e045a595523fd6e4317b0bb1dc68bb5a5982406",
+            "version": "1.25.0"
+          },
+          {
+            "filename": "debs/stable/x86_64/v/vulkan-loader-generic/vulkan-loader-generic_1.4.354_x86_64.deb",
+            "name": "vulkan-loader-generic",
+            "sha256": "0c7719ff42840544d5030375b8ec1e126cdb9ad55e8cfae5455ad2828ee20737",
+            "version": "1.4.354"
+          },
+          {
+            "filename": "debs/stable/x86_64/z/zstd/zstd_1.5.7-1_x86_64.deb",
+            "name": "zstd",
+            "sha256": "8aa3be8529a7227675bc5fd44304f9a0a08c6356578b95a0122ee5be789ca438",
+            "version": "1.5.7-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/m/mesa-vulkan-icd-swrast/mesa-vulkan-icd-swrast_26.0.6-1_x86_64.deb",
+            "name": "mesa-vulkan-icd-swrast",
+            "sha256": "7433c99368ea830a74c006b9babad567048359a978143b8c61e9c28bb1cec8c7",
+            "version": "26.0.6-1"
+          },
+          {
+            "filename": "debs/stable/all/v/vulkan-icd/vulkan-icd_0.1_all.deb",
+            "name": "vulkan-icd",
+            "sha256": "5f07beec0c57add366c64d71731a0630c596573a418dbcb605ede5e63df49563",
+            "version": "0.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libplacebo/libplacebo_7.360.1_x86_64.deb",
+            "name": "libplacebo",
+            "sha256": "b76f643ddd985011cc274e2678e1e2381e971dfcf2604b3144ec5ea030615daa",
+            "version": "7.360.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/librav1e/librav1e_0.8.1_x86_64.deb",
+            "name": "librav1e",
+            "sha256": "3d5f2a224f14648d2c8b12904792fbd40053d83675f7e429296a91aeb45cb158",
+            "version": "0.8.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libsoxr/libsoxr_0.1.3-8_x86_64.deb",
+            "name": "libsoxr",
+            "sha256": "bee93efbb678a4629c0125d325026551fe8202aa9bb49580a3a167fdd0d12b04",
+            "version": "0.1.3-8"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libsrt/libsrt_1.5.5_x86_64.deb",
+            "name": "libsrt",
+            "sha256": "542e0b374b883133fa352c94fc952d5a72f232d3694b5b8635a22985a5672fb7",
+            "version": "1.5.5"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libssh/libssh_0.12.0-1_x86_64.deb",
+            "name": "libssh",
+            "sha256": "f4cfb44a8ef9131bf7ac537d65a8e6f09883fffa24eaeaf92fea0d44148a427b",
+            "version": "0.12.0-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libtheora/libtheora_1.2.0-1_x86_64.deb",
+            "name": "libtheora",
+            "sha256": "f6ade7209547d7f9181e5bc6782ce749eb0955d9b8c92d82828638b12a5a3f19",
+            "version": "1.2.0-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libjpeg-turbo/libjpeg-turbo_3.1.4.1_x86_64.deb",
+            "name": "libjpeg-turbo",
+            "sha256": "2194baac631e81c01c8da7027f8fa25cf16fa49723ee955940b6064c9ba1e9aa",
+            "version": "3.1.4.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libv4l/libv4l_1.24.1-2_x86_64.deb",
+            "name": "libv4l",
+            "sha256": "f6357c6c44b1b1a8c3599349fe9d3494273eaaa64309f86c7f5f7a5070c53825",
+            "version": "1.24.1-2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libvidstab/libvidstab_1.1.1-3_x86_64.deb",
+            "name": "libvidstab",
+            "sha256": "e6478c59bcb842e6713ddd98a293073ce0ab3c01ec9f29843aaeaa4e0006a80a",
+            "version": "1.1.1-3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libvmaf/libvmaf_3.2.0_x86_64.deb",
+            "name": "libvmaf",
+            "sha256": "a9ad8cf7a9643ba8ea2b66bab3348593335a0998bb08d2e1b8d5b575ea187265",
+            "version": "3.2.0"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libvo-amrwbenc/libvo-amrwbenc_0.1.3-2_x86_64.deb",
+            "name": "libvo-amrwbenc",
+            "sha256": "840a1cbb4e028a1fe0677981fa54ab25a94f20032327843d90d4733bc62eac56",
+            "version": "0.1.3-2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libvpx/libvpx_1:1.16.0_x86_64.deb",
+            "name": "libvpx",
+            "sha256": "4ab5a37a99d3aa58d11bbf74923ddfac622f8c135136c3f8119c968c5468b10d",
+            "version": "1:1.16.0"
+          },
+          {
+            "filename": "debs/stable/x86_64/g/giflib/giflib_5.2.2-2_x86_64.deb",
+            "name": "giflib",
+            "sha256": "bc0eb87711ddb9eb6bdfce1e443c151f818866b93a5eb9662060a67a7dde761b",
+            "version": "5.2.2-2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libtiff/libtiff_4.7.1_x86_64.deb",
+            "name": "libtiff",
+            "sha256": "3232caf4a5fe8615811a8c62a229c2dec1bb05c671b6b583b54d29e2e8e3500b",
+            "version": "4.7.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libwebp/libwebp_1.6.0-1_x86_64.deb",
+            "name": "libwebp",
+            "sha256": "f4490f9068a73b8dd53a9e2b0acbf340f1e247bdee0c451691b2d4ab162d7e28",
+            "version": "1.6.0-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libx264/libx264_1:0.164.3191-1_x86_64.deb",
+            "name": "libx264",
+            "sha256": "ceb41dbee16fbb971656db91b1d9d62227b110566ac30ab829c3696697cffd33",
+            "version": "1:0.164.3191-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libx265/libx265_4.2_x86_64.deb",
+            "name": "libx265",
+            "sha256": "6e238eae16caf356571075ef09ed636d77528db899a1b6d98407c0996646c250",
+            "version": "4.2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libzimg/libzimg_3.0.6_x86_64.deb",
+            "name": "libzimg",
+            "sha256": "d63d691bc8e4188c1fa08ebe3755e918c742fa817717354597cf1ece89be4d60",
+            "version": "3.0.6"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libsodium/libsodium_1.0.22-1_x86_64.deb",
+            "name": "libsodium",
+            "sha256": "65bde06fe95a65ef94bf372b76ef9de37e1d86aa270c076724130d4d1914d9d6",
+            "version": "1.0.22-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libzmq/libzmq_4.3.5-2_x86_64.deb",
+            "name": "libzmq",
+            "sha256": "d66c0da76d716ae9b5e8a37d47162c51beefbe3536d9c80d00a4862b6b710d95",
+            "version": "4.3.5-2"
+          },
+          {
+            "filename": "debs/stable/x86_64/o/ocl-icd/ocl-icd_2.3.5_x86_64.deb",
+            "name": "ocl-icd",
+            "sha256": "d9409702a7d4014ec4e95555044d39c4a8879a5d5ca5320620e7a9e0db2abe30",
+            "version": "2.3.5"
+          },
+          {
+            "filename": "debs/stable/x86_64/f/fftw/fftw_3.3.11_x86_64.deb",
+            "name": "fftw",
+            "sha256": "41607fc4dbeef01ea848aa57e9764495467ed95152478c98eb474b0460a6466b",
+            "version": "3.3.11"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libsamplerate/libsamplerate_0.2.2-4_x86_64.deb",
+            "name": "libsamplerate",
+            "sha256": "4352bb3ed1343632ef84bfa489d9c63ae7f47ce25f48bd3f2c48b4a3f482f337",
+            "version": "0.2.2-4"
+          },
+          {
+            "filename": "debs/stable/x86_64/r/rubberband/rubberband_4.0.0-1_x86_64.deb",
+            "name": "rubberband",
+            "sha256": "c532b9ac232305aaa3c24823b77401c7c8ea494d70ae758bf0f65100fedddc30",
+            "version": "4.0.0-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/s/svt-av1/svt-av1_4.1.0_x86_64.deb",
+            "name": "svt-av1",
+            "sha256": "944a9b5ff7e3a2c0d84edfd42938d7bd19fad02feb4fc964c0ef91e295ddcc42",
+            "version": "4.1.0"
+          },
+          {
+            "filename": "debs/stable/x86_64/x/xvidcore/xvidcore_1.3.7-1_x86_64.deb",
+            "name": "xvidcore",
+            "sha256": "eb8918fce130c5ab7d2bec41f44b896a1f4da4fd15ba953a3b57567ba0c87109",
+            "version": "1.3.7-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/f/ffmpeg/ffmpeg_8.1.2_x86_64.deb",
+            "name": "ffmpeg",
+            "sha256": "30ac9e82692620709ecd03af5c21c5e539b7fd32d89b7b93c3b40fc1279bedf7",
+            "version": "8.1.2"
+          }
+        ],
+        "python": [
+          {
+            "filename": "debs/stable/x86_64/n/ncurses/ncurses_6.6.20260307+really6.5.20250830_x86_64.deb",
+            "name": "ncurses",
+            "sha256": "1924d3fbef558aab389272e37505c0885037bc5912a76ab6a715fa628589c823",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/x86_64/r/readline/readline_8.3.3_x86_64.deb",
+            "name": "readline",
+            "sha256": "6fca2faaaf28ea5d6ce3ef0ab678918ac1fb058753ef85c5c33c0184db15c514",
+            "version": "8.3.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/g/gdbm/gdbm_1.26-1_x86_64.deb",
+            "name": "gdbm",
+            "sha256": "9fd341622b4bdd41779bf9279320582497a3ce8cd929f8ce13bf005fa6dc3192",
+            "version": "1.26-1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libandroid-posix-semaphore/libandroid-posix-semaphore_0.1-4_x86_64.deb",
+            "name": "libandroid-posix-semaphore",
+            "sha256": "0d465ceaa301e324971baa3c79bc76f7f6459286eaaac88892799b9547ba1bab",
+            "version": "0.1-4"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libbz2/libbz2_1.0.8-8_x86_64.deb",
+            "name": "libbz2",
+            "sha256": "92f2dabeb1a29de62f31fc813a3bf6ebf9fed681cb5fde4ae4c6c101c9412b87",
+            "version": "1.0.8-8"
+          },
+          {
+            "filename": "debs/stable/all/c/ca-certificates/ca-certificates_1:2026.05.14_all.deb",
+            "name": "ca-certificates",
+            "sha256": "0ff9b6c93df094e4b2fd95ae269a32383aaf89fa6117a11853124b50abd027cc",
+            "version": "1:2026.05.14"
+          },
+          {
+            "filename": "debs/stable/x86_64/z/zlib/zlib_1.3.2_x86_64.deb",
+            "name": "zlib",
+            "sha256": "61f95c0da4c0aa55cbf6547de7a3aab35a0e28ced7a51d2958e5807915420ad9",
+            "version": "1.3.2"
+          },
+          {
+            "filename": "debs/stable/x86_64/o/openssl/openssl_1:3.6.3_x86_64.deb",
+            "name": "openssl",
+            "sha256": "e9b5132edc694e1a3e05ae7b1fc77ad66f2c3eaa20f5084a8fea11cd3389cedb",
+            "version": "1:3.6.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libcrypt/libcrypt_0.2-6_x86_64.deb",
+            "name": "libcrypt",
+            "sha256": "5ecab772d908707554cffcffce894798e7a274920d56a7c6fbaa54b41f4dfc47",
+            "version": "0.2-6"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libexpat/libexpat_2.8.1_x86_64.deb",
+            "name": "libexpat",
+            "sha256": "19c87015a01020b85b8b4a80d85573b52e490c4ec6ddb92a4dedd006a3f2014e",
+            "version": "2.8.1"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libffi/libffi_3.5.2_x86_64.deb",
+            "name": "libffi",
+            "sha256": "4310fa16bf1a9a846166cdd11cdb090665193816155bec9debb0ea79aea07527",
+            "version": "3.5.2"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/liblzma/liblzma_5.8.3_x86_64.deb",
+            "name": "liblzma",
+            "sha256": "699a6cc8f3efde2fa67702f4b56d2b5e097588929b6cd915e11c174b92981ffd",
+            "version": "5.8.3"
+          },
+          {
+            "filename": "debs/stable/x86_64/l/libsqlite/libsqlite_3.53.2_x86_64.deb",
+            "name": "libsqlite",
+            "sha256": "3a15c52592bc7919a4e176ca91104debcb66cbc992ffd0142e0632b818b18d48",
+            "version": "3.53.2"
+          },
+          {
+            "filename": "debs/stable/x86_64/n/ncurses-ui-libs/ncurses-ui-libs_6.6.20260307+really6.5.20250830_x86_64.deb",
+            "name": "ncurses-ui-libs",
+            "sha256": "8995a48866b53686ac33aab7dbfaa52336ea2a485a2d4f9fce83d98f352fe67c",
+            "version": "6.6.20260307+really6.5.20250830"
+          },
+          {
+            "filename": "debs/stable/x86_64/p/python/python_3.13.13-1_x86_64.deb",
+            "name": "python",
+            "sha256": "2f94b31464ee145f5157a91cc129579c014219159570f125e0fd1bbbcb651230",
+            "version": "3.13.13-1"
+          },
+          {
+            "filename": "debs/stable/all/p/python-pip/python-pip_26.1.2_all.deb",
+            "name": "python-pip",
+            "sha256": "5f34382fa79a4e46585b3cdfbc6138439ca9298242eaca1025dd2ddaaa1083c8",
+            "version": "26.1.2"
+          },
+          {
+            "filename": "debs/stable/x86_64/p/python-pycryptodomex/python-pycryptodomex_3.23.0-3_x86_64.deb",
+            "name": "python-pycryptodomex",
+            "sha256": "227d9c0de1d869f0365b0203300b59a6251aea9f656cbede07af7ac8b98a1371",
+            "version": "3.23.0-3"
+          }
+        ]
+      },
+      "packageIndexSha256": "c9271a78067cbd18429251934b70b73bc8dcdc949605f99dfa10eb229ac5f595",
+      "termuxArchitecture": "x86_64"
+    }
+  },
+  "mutagen": {
+    "sha256": "4f077fe87d3fc7fba259aa63d8c026b18382ca6a42ef37c61e16f1b1b5b82fe7",
+    "url": "https://files.pythonhosted.org/packages/47/d8/a29e4e3991765e7ce4ed1f7e4074fe1ba9da03e0048639734de60f9cadb9/mutagen-1.48.1-py3-none-any.whl",
+    "version": "1.48.1"
+  },
+  "repository": "https://termux.net",
+  "schemaVersion": 1
+}
