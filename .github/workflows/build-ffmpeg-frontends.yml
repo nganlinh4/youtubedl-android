@@ -35,6 +35,7 @@ jobs:
         working-directory: termux-packages
         run: |
           python3 - <<'PY'
+          import re
           from pathlib import Path
           ffmpeg = Path("packages/ffmpeg/build.sh")
           source = ffmpeg.read_text()
@@ -50,6 +51,7 @@ jobs:
               source.count("-Dicu=enabled") != 1
               or source.count("-Ddocs=enabled") != 1
               or source.count(", libicu") != 1
+              or source.count('TERMUX_PKG_BUILD_DEPENDS="doxygen, python, readline"') != 1
           ):
               raise SystemExit("libxml2 ICU configuration changed")
           libxml2.write_text(
@@ -57,6 +59,21 @@ jobs:
               .replace("-Ddocs=enabled", "-Ddocs=disabled")
               .replace(", libicu", "")
           )
+
+          source = libxml2.read_text()
+          source = source.replace(
+              'TERMUX_PKG_BUILD_DEPENDS="doxygen, python, readline"',
+              'TERMUX_PKG_BUILD_DEPENDS="python, readline"',
+          )
+          source, replacements = re.subn(
+              r"termux_step_host_build\(\) \{\n.*?\n\}\n\n",
+              "",
+              source,
+              flags=re.DOTALL,
+          )
+          if replacements != 1:
+              raise SystemExit("libxml2 host documentation setup changed")
+          libxml2.write_text(source)
           PY
 
       - name: Build ICU-free libxml2 against NDK 29
