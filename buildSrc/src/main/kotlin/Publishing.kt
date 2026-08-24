@@ -31,7 +31,7 @@ internal fun Project.configurePublish(id: String) {
 
         repositories {
             maven {
-                url = uri(rootProject.buildDir.resolve("staging-deploy").absolutePath)
+                url = uri(rootProject.layout.buildDirectory.dir("staging-deploy"))
             }
         }
     }

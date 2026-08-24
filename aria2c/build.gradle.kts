@@ -3,7 +3,6 @@ plugins {
     id("signing")
     id("com.android.library")
     id("maven-publish")
-    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -19,11 +18,16 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android.txt"),
+                getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    packaging.jniLibs.keepDebugSymbols += "**/*.zip.so"
 }
 
 configurePublishing {

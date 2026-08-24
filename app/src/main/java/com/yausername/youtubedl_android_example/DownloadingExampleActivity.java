@@ -90,17 +90,15 @@ public class DownloadingExampleActivity extends AppCompatActivity implements Vie
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_start_download:
-                startDownload();
-                break;
-            case R.id.btn_stop_download:
-                try {
-                    YoutubeDL.getInstance().destroyProcessById(processId);
-                } catch (Exception e) {
-                    Log.e(TAG, e.toString());
-                }
-                break;
+        int viewId = v.getId();
+        if (viewId == R.id.btn_start_download) {
+            startDownload();
+        } else if (viewId == R.id.btn_stop_download) {
+            try {
+                YoutubeDL.getInstance().destroyProcessById(processId);
+            } catch (Exception e) {
+                Log.e(TAG, e.toString());
+            }
         }
     }
 

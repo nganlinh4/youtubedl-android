@@ -1,9 +1,9 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
 }
 
 android {
+    enableKotlin = false
     namespace = "com.yausername.youtubedl_android_example"
     compileSdk = 34
 
@@ -27,7 +27,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android.txt"),
+                getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
@@ -38,11 +38,18 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    buildFeatures.buildConfig = true
+
     splits.abi {
         isEnable = true
         reset()
         include("x86", "x86_64", "armeabi-v7a", "arm64-v8a")
         isUniversalApk = true
+    }
+
+    packaging.jniLibs {
+        useLegacyPackaging = true
+        keepDebugSymbols += "**/*.zip.so"
     }
 
 }

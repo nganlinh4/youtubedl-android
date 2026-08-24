@@ -49,10 +49,11 @@ internal class StreamProcessExtractor(
 
     private fun getProgress(line: String): Float {
         val matcher = p.matcher(line)
-        if (matcher.find()) return matcher.group(GROUP_PERCENT).toFloat()
+        if (matcher.find()) return requireNotNull(matcher.group(GROUP_PERCENT)).toFloat()
             .also { progress = it } else {
             val mAria2c = pAria2c.matcher(line)
-            if (mAria2c.find()) return mAria2c.group(1).toFloat().also { progress = it }
+            if (mAria2c.find()) return requireNotNull(mAria2c.group(1)).toFloat()
+                .also { progress = it }
         }
         return progress
     }

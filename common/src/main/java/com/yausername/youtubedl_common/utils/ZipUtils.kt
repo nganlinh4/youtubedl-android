@@ -56,7 +56,7 @@ object ZipUtils {
                 if (entry!!.isDirectory) {
                     entryDestination.mkdirs()
                 } else {
-                    entryDestination.parentFile.mkdirs()
+                    entryDestination.parentFile?.mkdirs()
                     FileOutputStream(entryDestination).use { out -> IOUtils.copy(zis, out) }
                 }
             }

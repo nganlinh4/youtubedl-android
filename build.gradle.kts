@@ -1,15 +1,14 @@
 import com.android.build.api.dsl.Publishing
+import org.gradle.api.tasks.bundling.Zip
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    val kotlin_version by extra("2.1.20")
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:8.10.0")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+        classpath("com.android.tools.build:gradle:9.1.1")
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -45,27 +44,19 @@ tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
 
-tasks.register("packagePublishedArtifacts") {
-    val librariesToPublish = listOf("common", "library", "aria2c", "ffmpeg")
+val librariesToPublish = listOf("common", "library", "aria2c", "ffmpeg")
+
+tasks.register<Zip>("packagePublishedArtifacts") {
     librariesToPublish.forEach {
         dependsOn(":$it:publishReleasePublicationToMavenRepository")
     }
-    doLast {
-        exec {
-            workingDir = project.buildDir.resolve("staging-deploy")
-            standardOutput = System.out
-            errorOutput = System.err
-
-            val zipCommands = listOf(
-                "zip",
-                "-r",
-                project.buildDir.resolve("archive-$versionName.zip").absolutePath,
-            ) + librariesToPublish.map { "io/github/junkfood02/youtubedl-android/$it/$versionName" }
-
-            commandLine(zipCommands)
+    from(layout.buildDirectory.dir("staging-deploy")) {
+        librariesToPublish.forEach { library ->
+            include("io/github/junkfood02/youtubedl-android/$library/$versionName/**")
         }
     }
-
+    archiveFileName.set("archive-$versionName.zip")
+    destinationDirectory.set(layout.buildDirectory)
 }
 
 
