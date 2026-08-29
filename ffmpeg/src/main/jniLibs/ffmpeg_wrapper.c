@@ -8,35 +8,55 @@
  *       -ldl -Wl,-z,max-page-size=16384 -fPIE -pie -s -O2
  */
 #include <dlfcn.h>
+#include <dirent.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef int (*main_fn)(int, char**);
 
+static void* load_private_library(const char* directory, const char* name, int flags) {
+    if (!directory || !directory[0]) return dlopen(name, flags);
+    size_t size = strlen(directory) + strlen(name) + 2;
+    char* path = malloc(size);
+    if (!path) return NULL;
+    snprintf(path, size, "%s/%s", directory, name);
+    void* library = dlopen(path, flags);
+    free(path);
+    return library;
+}
+
 /* FFmpeg shared libraries to preload (order matters for dependency resolution) */
-static const char* ffmpeg_libs[] = {
-    "libavutil.so",
-    "libswresample.so",
-    "libswscale.so",
-    "libpostproc.so",
-    "libavcodec.so",
-    "libavformat.so",
-    "libavfilter.so",
-    "libavdevice.so",
-    NULL
-};
+static int is_shared_library(const char* name) {
+    return strncmp(name, "lib", 3) == 0 && strstr(name, ".so") != NULL &&
+        strcmp(name, "libffmpeg_real.so") != 0 &&
+        strcmp(name, "libffprobe_real.so") != 0;
+}
+
+static void preload_private_libraries(const char* directory) {
+    if (!directory || !directory[0]) return;
+    for (int pass = 0; pass < 16; pass++) {
+        DIR* stream = opendir(directory);
+        if (!stream) return;
+        struct dirent* entry;
+        while ((entry = readdir(stream)) != NULL) {
+            if (is_shared_library(entry->d_name))
+                load_private_library(directory, entry->d_name, RTLD_NOW | RTLD_GLOBAL);
+        }
+        closedir(stream);
+    }
+}
 
 int main(int argc, char* argv[]) {
-    /* Preload FFmpeg shared libs from LD_LIBRARY_PATH (set by YoutubeDL.kt) */
-    for (int i = 0; ffmpeg_libs[i]; i++) {
-        dlopen(ffmpeg_libs[i], RTLD_NOW | RTLD_GLOBAL);
-        /* Ignore failures — some libs may not be present in all builds */
-    }
+    const char* library_dir = getenv("SGT_FFMPEG_LIBRARY_DIR");
+    if (library_dir && library_dir[0]) setenv("LD_LIBRARY_PATH", library_dir, 1);
+
+    preload_private_libraries(library_dir);
 
     /* Load the real FFmpeg binary from the extracted packages directory.
      * It's placed there as "libffmpeg_real.so" by the app's download manager.
      * LD_LIBRARY_PATH includes packages/ffmpeg/usr/lib so dlopen finds it. */
-    void* bin = dlopen("libffmpeg_real.so", RTLD_NOW);
+    void* bin = load_private_library(library_dir, "libffmpeg_real.so", RTLD_NOW);
     if (!bin) {
         fprintf(stderr, "ffmpeg_wrapper: cannot load real ffmpeg: %s\n", dlerror());
         return 127;

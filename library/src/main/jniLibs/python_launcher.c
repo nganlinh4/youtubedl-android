@@ -10,6 +10,7 @@
  *       -ldl -Wl,-z,max-page-size=16384 -fPIE -pie -s
  */
 #include <dlfcn.h>
+#include <dirent.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,6 +19,34 @@
 typedef int (*Py_BytesMain_fn)(int, char**);
 typedef int (*Py_Main_fn)(int, wchar_t**);
 typedef wchar_t* (*Py_DecodeLocale_fn)(const char*, size_t*);
+
+static void* load_private_library(const char* directory, const char* name, int flags) {
+    if (!directory || !directory[0]) return dlopen(name, flags);
+    size_t size = strlen(directory) + strlen(name) + 2;
+    char* path = malloc(size);
+    if (!path) return NULL;
+    snprintf(path, size, "%s/%s", directory, name);
+    void* library = dlopen(path, flags);
+    free(path);
+    return library;
+}
+
+static void preload_private_libraries(const char* directory) {
+    if (!directory || !directory[0]) return;
+    for (int pass = 0; pass < 4; pass++) {
+        DIR* stream = opendir(directory);
+        if (!stream) return;
+        struct dirent* entry;
+        while ((entry = readdir(stream)) != NULL) {
+            const char* name = entry->d_name;
+            size_t length = strlen(name);
+            if (length < 4 || strcmp(name + length - 3, ".so") != 0) continue;
+            if (strncmp(name, "libpython", 9) == 0) continue;
+            load_private_library(directory, name, RTLD_LAZY | RTLD_GLOBAL);
+        }
+        closedir(stream);
+    }
+}
 
 /* Try multiple Python sonames for compatibility */
 static const char* python_libs[] = {
@@ -33,9 +62,12 @@ static const char* python_libs[] = {
 
 int main(int argc, char* argv[]) {
     void* lib = NULL;
+    const char* library_dir = getenv("SGT_PYTHON_LIBRARY_DIR");
+    if (library_dir && library_dir[0]) setenv("LD_LIBRARY_PATH", library_dir, 1);
+    preload_private_libraries(library_dir);
 
     for (int i = 0; python_libs[i] != NULL; i++) {
-        lib = dlopen(python_libs[i], RTLD_NOW | RTLD_GLOBAL);
+        lib = load_private_library(library_dir, python_libs[i], RTLD_NOW | RTLD_GLOBAL);
         if (lib) break;
     }
 

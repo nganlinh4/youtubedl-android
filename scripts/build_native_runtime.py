@@ -42,7 +42,20 @@ MUTAGEN = {
     ),
     "sha256": "4f077fe87d3fc7fba259aa63d8c026b18382ca6a42ef37c61e16f1b1b5b82fe7",
 }
+YT_DLP_EJS = {
+    "version": "0.8.0",
+    "url": (
+        "https://files.pythonhosted.org/packages/e3/bd/"
+        "520769863744b669440a924271a6159ddd82ad5ae26b4ac4d4b69e9f8d44/"
+        "yt_dlp_ejs-0.8.0-py3-none-any.whl"
+    ),
+    "sha256": "79300e5fca7f937a1eeede11f0456862c1b41107ce1d726871e0207424f4bdb4",
+}
 FIXED_ZIP_TIME = (2026, 1, 1, 0, 0, 0)
+TERMUX_LIBRARY_RUNPATH = b"/data/data/com.termux/files/usr/lib\0"
+PRIVATE_LIBRARY_RUNPATH = b"$ORIGIN\0" + b"\0" * (
+    len(TERMUX_LIBRARY_RUNPATH) - len(b"$ORIGIN\0")
+)
 
 
 @dataclass(frozen=True)
@@ -191,6 +204,7 @@ def refresh_lock(path: Path, abis: list[str]) -> None:
         "schemaVersion": 1,
         "repository": REPOSITORY,
         "mutagen": MUTAGEN,
+        "ytDlpEjs": YT_DLP_EJS,
         "architectures": architectures,
     }
     path.write_text(json.dumps(document, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -287,19 +301,25 @@ def package_bytes(record: dict[str, str], cache: Path, repository: str) -> bytes
     return data
 
 
-def merge_mutagen(entries: dict[str, RuntimeEntry], python_version: str, cache: Path) -> None:
-    wheel = cache / Path(MUTAGEN["url"]).name
-    if wheel.is_file() and sha256(wheel.read_bytes()) == MUTAGEN["sha256"]:
+def merge_python_wheel(
+    entries: dict[str, RuntimeEntry],
+    python_version: str,
+    cache: Path,
+    package: dict[str, str],
+    include: Callable[[str], bool],
+) -> None:
+    wheel = cache / Path(package["url"]).name
+    if wheel.is_file() and sha256(wheel.read_bytes()) == package["sha256"]:
         data = wheel.read_bytes()
     else:
-        data = fetch(MUTAGEN["url"])
-        if sha256(data) != MUTAGEN["sha256"]:
-            raise ValueError("Mutagen wheel hash mismatch")
+        data = fetch(package["url"])
+        if sha256(data) != package["sha256"]:
+            raise ValueError(f"{wheel.name} hash mismatch")
         wheel.write_bytes(data)
     prefix = f"usr/lib/python{python_version}/site-packages/"
     with zipfile.ZipFile(io.BytesIO(data)) as archive:
         for info in archive.infolist():
-            if info.is_dir() or not (info.filename.startswith("mutagen/") or ".dist-info/" in info.filename):
+            if info.is_dir() or not include(info.filename):
                 continue
             entries[prefix + info.filename] = RuntimeEntry(
                 archive.read(info), stat.S_IFREG | 0o644
@@ -316,6 +336,18 @@ def write_zip(path: Path, entries: dict[str, RuntimeEntry]) -> None:
             info.external_attr = entry.mode << 16
             info.compress_type = zipfile.ZIP_DEFLATED
             output.writestr(info, entry.data)
+
+
+def rewrite_private_runpaths(entries: dict[str, RuntimeEntry]) -> dict[str, RuntimeEntry]:
+    return {
+        name: RuntimeEntry(
+            entry.data.replace(TERMUX_LIBRARY_RUNPATH, PRIVATE_LIBRARY_RUNPATH),
+            entry.mode,
+            entry.symlink,
+            entry.package,
+        )
+        for name, entry in entries.items()
+    }
 
 
 def prune_runtime(
@@ -384,6 +416,12 @@ def build_abi(
             merge_package(entries, data, role, record["name"])
         built[role] = entries
 
+    built["python"]["usr/lib/libandroid-support.so"] = RuntimeEntry(
+        compile_android_support_shim(repo, abi, cache / abi),
+        stat.S_IFREG | 0o755,
+        package="python",
+    )
+
     libxml2_package = native_overrides / abi / "libxml2.deb"
     if not libxml2_package.is_file():
         raise ValueError(f"Missing ICU-free libxml2 package: {libxml2_package}")
@@ -396,7 +434,20 @@ def build_abi(
         merge_package(built[role], libxml2_package.read_bytes(), role, "libxml2")
 
     version = python_version(built["python"])
-    merge_mutagen(built["python"], version, cache / abi)
+    merge_python_wheel(
+        built["python"],
+        version,
+        cache / abi,
+        MUTAGEN,
+        lambda name: name.startswith("mutagen/") or "mutagen-" in name,
+    )
+    merge_python_wheel(
+        built["python"],
+        version,
+        cache / abi,
+        YT_DLP_EJS,
+        lambda name: name.startswith("yt_dlp_ejs/") or "yt_dlp_ejs-" in name,
+    )
     python_roots = [
         name
         for name, entry in built["python"].items()
@@ -418,6 +469,7 @@ def build_abi(
         built["ffmpeg"],
         ["usr/lib/libffmpeg_real.so", "usr/lib/libffprobe_real.so"],
     )
+    built["ffmpeg"] = rewrite_private_runpaths(built["ffmpeg"])
 
     runtime_root = output / abi
     write_zip(runtime_root / "libpython.zip.so", built["python"])
@@ -464,6 +516,35 @@ def ndk_tool(name: str) -> Path:
     host = "windows-x86_64" if os.name == "nt" else "linux-x86_64"
     suffix = ".exe" if os.name == "nt" else ""
     return ndk_root() / "toolchains" / "llvm" / "prebuilt" / host / "bin" / f"{name}{suffix}"
+
+
+def compile_android_support_shim(repo: Path, abi: str, output: Path) -> bytes:
+    host = "windows-x86_64" if os.name == "nt" else "linux-x86_64"
+    triple = {
+        "arm64-v8a": "aarch64-linux-android24",
+        "armeabi-v7a": "armv7a-linux-androideabi24",
+        "x86_64": "x86_64-linux-android24",
+    }[abi]
+    compiler = ndk_root() / "toolchains" / "llvm" / "prebuilt" / host / "bin" / f"{triple}-clang"
+    if os.name == "nt":
+        compiler = compiler.with_suffix(".cmd")
+    output.mkdir(parents=True, exist_ok=True)
+    target = output / "libandroid-support.so"
+    subprocess.run(
+        [
+            str(compiler),
+            "-shared",
+            "-fPIC",
+            "-O2",
+            "-s",
+            "-Wl,-soname,libandroid-support.so",
+            str(repo / "library/src/main/jniLibs/android_support_compat.c"),
+            "-o",
+            str(target),
+        ],
+        check=True,
+    )
+    return target.read_bytes()
 
 
 def verify_dynamic_main(binary: Path) -> None:
